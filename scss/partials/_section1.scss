@@ -1,0 +1,111 @@
+/* SECTION 1 */
+
+.sectionOne {
+    //height: 504px;
+    background: $section-one-color;
+    background-size: cover;
+    width: 100%;
+}
+
+.leftButton p {
+    font-size: 70px;
+    float: left;
+    margin: 204px 0 0 7px;
+    color: $aqua-color;
+    display: inline;
+    cursor: pointer;
+    z-index: 20;
+    @media(max-width: 600px) {
+        display: flex;
+        flex-direction: row;
+        float: left;
+        width: 10%;
+    }
+}
+
+.sliderUl {
+    ul {
+        list-style: none;
+    }
+    li {
+        display: none;
+        float: left;
+        margin: 100px 0 0 -68px;
+    }
+}
+
+.sliderUl .visible {
+    display: inline-block;
+}
+
+.slider {
+    margin: 0;
+    padding: 0;
+    //transform: scale(1.25, 1.25);
+    display: inline;
+    @media(max-width: 600px) {
+        display: flex;
+        flex-direction: row;
+        float: right;
+        width: 80%;
+    }
+}
+
+.sectionContainer {
+    text-align: center;
+    padding: 135px 0 0 0;
+}
+
+.logoBlack {
+    margin: 0 40px 0 0;
+    font-size: 40px;
+    display: inline-block;
+    font-weight: 500;
+    color: black;
+}
+
+.logoBlack span {
+    font-size: 40px;
+    color: $aqua-color;
+    font-weight: 600;
+}
+
+.text {
+    margin: 27px 40px 0 0;
+    letter-spacing: 0.4px;
+    color: black;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.sectionOne .buttonOne {
+    margin: 26px 40px 0 0px;
+    width: 264px;
+    height: 53px;
+    background-color: $aqua-color;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+
+.buttonOne span {
+    padding: 13px;
+    display: inline-block;
+    letter-spacing: 0.1px;
+    font-size: 23px;
+    color: white;
+}
+
+.rightButton p {
+    font-size: 70px;
+    margin: 204px 26px 0 0;
+    color: $aqua-color;
+    float: right;
+    cursor: pointer;
+    @media(max-width: 600px) {
+        display: flex;
+        flex-direction: row;
+        float: right;
+        width: 10%;
+    }
+}
