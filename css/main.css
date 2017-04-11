@@ -123,7 +123,7 @@
 
 .stickyBar .menu {
   display: none; }
-  @media (min-width: 600px) {
+  @media (min-width: 650px) {
     .stickyBar .menu {
       display: inline-block;
       float: right;
@@ -133,7 +133,7 @@
   display: block;
   text-align: center;
   color: white; }
-  @media (min-width: 600px) {
+  @media (min-width: 650px) {
     .stickyBar li {
       display: inline-block;
       font-size: 20px;
@@ -157,7 +157,7 @@
     margin-top: calc(22% - 10px);
     letter-spacing: 2px;
     font-weight: 600; }
-  @media (min-width: 600px) {
+  @media (min-width: 650px) {
     .showHideMenu {
       display: none; } }
 
@@ -168,19 +168,21 @@
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
-  top: calc(30% - 10px);
-  left: calc(30% - 20px);
+  top: calc(50% - 35px);
+  left: calc(25% - 25px);
   position: absolute; }
-  @media (min-width: 600px) {
+  @media (min-width: 650px) {
     .logo {
       position: relative;
       left: 0%;
       top: 2.5em; } }
 
 .sectionOne {
-  height: 830px;
-  border: 1px solid orange;
-  position: relative; }
+  height: 640px; }
+  @media (min-width: 600px) {
+    .sectionOne {
+      height: 830px;
+      position: relative; } }
 
 .photo {
   background-size: cover;
@@ -189,8 +191,8 @@
   background-attachment: fixed;
   background-position: center;
   background-image: url("../images/wybrane/Natalia_Tarnawska-11.jpg");
-  height: 100%;
-  width: 100%; }
+  height: 100vh;
+  width: 100vw; }
   @media (min-width: 600px) {
     .photo {
       height: 100vh;
@@ -250,11 +252,11 @@
   font-weight: 600;
   color: white;
   font-size: 16px;
-  margin: 10px 0 0 35px; }
+  margin: 5px calc(50% - 150px); }
   @media (min-width: 600px) {
     .headerTwo {
       font-size: 34px;
-      margin-left: 270px; } }
+      margin: 0 0 0 265px; } }
 
 .btnOne {
   border: 2px solid white;
@@ -278,3 +280,64 @@
       .btnOne span {
         color: white;
         font-size: 25px; } }
+
+.sectionTwo {
+  height: 649px;
+  background-color: #3f3640;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  width: 100vw; }
+
+.allText * {
+  width: 100%; }
+
+@media (min-width: 600px) {
+  .allText {
+    width: 50%;
+    display: inline-block;
+    margin: 60px 0; } }
+
+.headerSectionTwo {
+  font-size: 35px;
+  font-weight: 400;
+  margin: 32px 6px; }
+  @media (min-width: 600px) {
+    .headerSectionTwo {
+      font-size: 65px;
+      margin: 42px 6px;
+      font-weight: 600; } }
+
+.beltSectionTwo {
+  width: 120px;
+  height: 3px;
+  background: white;
+  margin: -15px 0 0 6px; }
+  @media (min-width: 600px) {
+    .beltSectionTwo {
+      width: 120px; } }
+
+.headerThreeSectionTwo {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 25px 0 30px 0; }
+
+.textSectionTwo {
+  color: #999999;
+  text-align: justify;
+  letter-spacing: 1px;
+  line-height: 22px; }
+
+.imageSectionTwo {
+  display: none; }
+  @media (min-width: 600px) {
+    .imageSectionTwo {
+      display: inline-block;
+      height: 649px;
+      background-image: url(../images/Produktowe_Roksana-1.jpg);
+      background-size: 55% auto;
+      background-attachment: fixed;
+      background-position: 95% -31%;
+      background-repeat: no-repeat;
+      float: right; } }

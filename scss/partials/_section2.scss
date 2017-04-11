@@ -1,0 +1,68 @@
+.sectionTwo {
+    height: 649px;
+    background-color: $sectionTwoColor;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    width: 100vw;
+}
+
+.allText {
+    * {
+        width: 100%;
+    }
+    @media (min-width: 600px) {
+        width: 50%;
+        display: inline-block;
+        margin: 60px 0;
+    }
+}
+
+.headerSectionTwo {
+    font-size: 35px;
+    font-weight: 400;
+    margin: 32px 6px;
+    @media (min-width: 600px) {
+        font-size: 65px;
+        margin: 42px 6px;
+        font-weight: 600;
+    }
+}
+
+.beltSectionTwo {
+    width: 120px;
+    height: 3px;
+    background: white;
+    margin: -15px 0 0 6px;
+    @media (min-width: 600px) {
+        width: 120px;
+    }
+}
+
+.headerThreeSectionTwo {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 25px 0 30px 0;
+}
+
+.textSectionTwo {
+    color: $textTwoColor;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+.imageSectionTwo {
+    display: none;
+    @media (min-width: 600px) {
+        display: inline-block;
+        height: 649px;
+        background-image: url(../images/Produktowe_Roksana-1.jpg);
+        background-size: 55% auto;
+        background-attachment: fixed;
+        background-position: 95% -31%;
+        background-repeat: no-repeat;
+        float: right;
+    }
+}
