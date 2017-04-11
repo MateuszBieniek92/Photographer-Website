@@ -5,12 +5,13 @@
     left: 0;
     right: 0;
     top: 0;
+    width: 100%;
 }
 
-.bar {
+.barOne {
     height: 183px;
     @media (min-width: 600px) {
-        height: 123px;
+    height: 123px;
     }
 }
 
