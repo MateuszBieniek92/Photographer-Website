@@ -1,0 +1,100 @@
+.sectionFive {
+    height: 3013px;
+    width: 100vw;
+    top: 3852px;
+    background-color: $sectionFiveColor;
+    position: absolute;
+    z-index: 2;
+    div {
+        color: white;
+        .bar {
+            background-color: white;
+        }
+    }
+    @media (min-width: 600px) {
+        height: 1805px;
+        width: 100vw;
+        top: 3194px;
+    }
+}
+
+.btnPortfolio {
+    width: 100%;
+    height: 60px;
+    border: 3px solid white;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px 0;
+    text-align: center;
+    padding-top: calc(50% - 170px);
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    @media (min-width: 600px) {
+        width: 150px;
+        padding-top: calc(5% - 30px);
+        margin: 3px 5px;
+    }
+}
+
+.btnsSectionFive {
+    margin-bottom: 60px;
+    @media (min-width: 600px) {
+        display: flex;
+        flex-direction: row;
+        margin-left: calc(24% - 10px);
+    }
+}
+
+.imagesRow {
+    display: flex;
+    flex-direction: column;
+    * {
+        width: 636px;
+        padding: 0;
+        @media (min-width: 600px) {
+            height: 431px;
+            width: 636px;
+        }
+    }
+    @media (min-width: 600px) {
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        position: relative;
+    }
+}
+
+.imOne {
+    width: 100vw;
+    height: 250px;
+    img {
+        max-width: 100vw;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media (min-width: 600px) {
+            width: 636px;
+            position: absolute;
+        }
+    }
+    @media (min-width: 600px) {
+        width: 636px;
+        height: 423px;
+        position: absolute;
+    }
+}
+
+.btnView {
+    margin-top: 30px;
+        padding: 15px 0;
+    @media (min-width: 600px) {
+        margin: 40px 0 0 calc(50% - 80px);
+         padding: 5px 0;
+    }
+}
+
+//ZDJ wid 636px / hei 431px;

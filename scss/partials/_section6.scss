@@ -1,0 +1,93 @@
+.sectionSix {
+    height: 2100px;
+    width: 100vw;
+    top: 6692px;
+    background-image: url("../images/backgroundSix.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+    z-index: 2;
+    div {
+        color: white;
+        .bar {
+            background-color: white;
+        }
+    }
+    @media (min-width: 600px) {
+        height: 985px;
+        width: 100vw;
+        top: 4999px;
+    }
+}
+
+.blogFlex {
+    display: flex;
+    flex-direction: column;
+    color: red;
+    @media (min-width: 600px) {
+        flex-direction: row;
+    }
+}
+
+.blogBox {
+    width: 95vw;
+    height: 600px;
+    background-color: white;
+    margin: 8px;
+
+    .blogTextName {    
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        color: $textTwoColor;
+    }
+    .blogHeader {
+        font-size: 26px;
+        font-weight: 700;
+        color: $headerSectionThree;
+    }
+    .blogDate {
+        margin-top: 10px ;
+        font-size: 14px;
+        color: $footerBtnCenter;
+    }
+    @media (min-width: 600px) {
+        width: 400px;
+    }
+    
+        p,
+    h2 {
+        text-align: center;
+        color: red;
+        @media (min-width: 600px) {
+            text-align: left;
+            margin-left: 20px;
+        }
+    }
+}
+
+.blogFoto {
+    width: 100%;
+    height: 75%;
+}
+
+.fotoOne {
+    background-image: url("../images/galeria/Ola_Maciejczyk-31-min.jpg");
+    background-position: 89%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fotoTwo {
+    background-image: url("../images/galeria/Natalia_Tarnawska-11-min.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fotoThree {
+    background-image: url("../images/galeria/Aleksandra_Los-17-min.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
