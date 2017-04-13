@@ -1,6 +1,6 @@
 .sectionSix {
     height: 2100px;
-    width: 100vw;
+    width: 100%;
     top: 6692px;
     background-image: url("../images/backgroundSix.jpg");
     background-size: cover;
@@ -17,8 +17,8 @@
     }
     @media (min-width: 600px) {
         height: 985px;
-        width: 100vw;
-        top: 4999px;
+        width: 100%;
+        top: 5131px;
     }
 }
 
@@ -36,8 +36,7 @@
     height: 600px;
     background-color: white;
     margin: 8px;
-
-    .blogTextName {    
+    .blogTextName {
         margin-top: 20px;
         margin-bottom: 10px;
         font-size: 15px;
@@ -49,15 +48,14 @@
         color: $headerSectionThree;
     }
     .blogDate {
-        margin-top: 10px ;
+        margin-top: 10px;
         font-size: 14px;
         color: $footerBtnCenter;
     }
     @media (min-width: 600px) {
         width: 400px;
     }
-    
-        p,
+    p,
     h2 {
         text-align: center;
         color: red;
@@ -71,6 +69,12 @@
 .blogFoto {
     width: 100%;
     height: 75%;
+}
+
+.bgHover {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
 }
 
 .fotoOne {
@@ -90,4 +94,21 @@
     background-image: url("../images/galeria/Aleksandra_Los-17-min.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+.magni {
+    display: inline-block;
+}
+.blogFoto:hover {
+    filter: brightness(50%);
+    transition: 0.5s;
+    .magni {
+        display: block;
+    }
+}
+
+.blogTextName:hover, .blogHeader:hover {
+    cursor: pointer;
+    color: $footerBtnRight;
+     transition: 0.5s;
+    
 }

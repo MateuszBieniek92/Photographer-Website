@@ -1,6 +1,6 @@
 .sectionThree {
     height: 1450px;
-    width: 100vw;
+    width: 100%;
     top: 1289px;
     background-image: url("../images/backgroundTwo.jpg");
     background-size: cover;
@@ -10,8 +10,8 @@
     position: absolute;
     @media (min-width: 600px) {
         height: 813px;
-        width: 100vw;
-        top: 1469px;
+        width: 100%;
+        top: 1540px;
     }
 }
 
@@ -68,7 +68,10 @@
         width: 25%;
         float: left;
         color: $footerBtnRight;
+        transition: 1s;
     }
+    text-align:center;
+    transition:2s;
     p {
         span {
             font-size: 20px;
@@ -80,7 +83,14 @@
         width: 75%;
         float: right;
         font-size: 15px;
-        font-weight: 300;
+        font-weight: 200;
         text-align: justify;
+    }
+}
+
+.text:hover {
+    i {
+        transform: rotateY(180deg);
+        color: #3f3640;
     }
 }

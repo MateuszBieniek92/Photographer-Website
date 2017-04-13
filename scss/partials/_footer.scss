@@ -1,6 +1,6 @@
 .footerParameters {
     height: 680px;
-    width: 100vw;
+    width: 100%;
     top: 9272px;
     background-image: url("../images/footer back.jpg");
     background-size: cover;
@@ -32,7 +32,8 @@
         }
     }
     @media (min-width: 600px) {
-        top: 6164px;
+        top: 6296px;
+         width: 100%;
     }
 }
 
@@ -44,7 +45,7 @@
     left: 0;
     right: 0;
     top: 497px;
-    width: 100vw;
+    width: 100%;
     @media (min-width: 600px) {
         height: 123px;
         top: 556px

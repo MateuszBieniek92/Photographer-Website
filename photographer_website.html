@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -15,24 +15,27 @@
     <header class="wrapper">
         <div class="container row">
             <div class="col-12 barOne">
-                <div class="logo"></div>
+
                 <div class="stickyBar">
+                    <div class="logo"></div>
                     <nav>
                         <div class="showHideMenu" type="submit">
                             <p> MENU</p>
                         </div>
                         <ul class="menu">
-                            <li>HOME</li>
-                            <li>O MNIE</li>
-                            <li>GALERIA</li>
-                            <li>BLOG</li>
-                            <li>KONTAKT</li>
+                            <li><a class="hoverAnimation" href="#"><span data-title="HOME">HOME</span></a></li>
+                            <li><a class="hoverAnimation" href="#"><span data-title="O MNIE">O MNIE</span></a></li>
+                            <li><a class="hoverAnimation" href="#"><span data-title="GALERIA">GALERIA</span></a></li>
+                            <li><a class="hoverAnimation" href="#"><span data-title="BLOG">BLOG</span></a></li>
+                            <li><a class="hoverAnimation" href="#"><span data-title="KONTAKT">KONTAKT</span></a></li>
                         </ul>
+                        <!--
                         <div id="nav-icon1">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
+-->
                     </nav>
                 </div>
             </div>
@@ -41,14 +44,33 @@
 
     <!-- SECTION 1 -->
     <section class="sectionOne">
-        <div class="photo"></div>
-        <div class="btnLeft"><span> < </span></div>
-        <div class="btnRight"><span> > </span></div>
+      
+        <ul class="photo">
+            <li><img class="imgOne"></li>
+            <li><img class="imgTwo"></li>
+            <li><img class="imgThree" </li>
+<!--
+                
+                src="images/galeria/Natalia_Tarnawska-11-min.jpg"
+                src="images/galeria/Anna_Moskal-13-min.jpg"
+                src="images/galeria/Aleksandra_Los-17-min.jpg">
+-->
+
+        </ul>
+        <!-- <div class="photo"></div> -->
+        <span class="btnLeft"><span> < </span></span>
+        <span class="btnRight"><span> > </span></span>
+           
+        <!--
+                    <span class="next-wrapper">
+            <span class="next"> > </span>
+        </span>
+-->
         <div class="position">
             <div class="container row">
                 <span class="headerOne">THE MOST CREATIVE </span>
                 <span class="headerTwo">AND ARTISTIC WAY OF PERFORMANCE</span>
-                <div type="submit" class="btnOne"><span>WIĘCEJ</span></div>
+                <div type="submit" class="btnOne"><span>MORE</span></div>
             </div>
         </div>
     </section>
@@ -132,6 +154,7 @@
     </section>
 
     <!--  SECTION 4      -->
+
     <section class="sectionFour">
         <div class="container row">
             <div class="headerSection"> TESTIMONIALS</div>
@@ -150,7 +173,6 @@
             </ul>
         </div>
     </section>
-
     <!--  SECTION 5      -->
     <section class="sectionFive">
         <div class="container row">
@@ -181,10 +203,10 @@
                 <div class="imOne"><img src="images/galeria/Dorota_Kacka_dzieciece-6-min.jpg"></div>
             </div>
             <div class="col-4">
-                <div class="imOne"><img src="images/galeria/Maria_Stozek-272-min.JPG"></div>
+                <div class="imOne"><img src="images/wybrane/Martyna_Wozniak-9.jpg"></div>
             </div>
             <div class="col-4">
-                <div class="imOne"><img src="images/galeria/Maria_Stozek-33%20copy-min.jpg"></div>
+                <div class="imOne"><img src="images/wybrane/Andzelika_Kowal-20.jpg"></div>
             </div>
         </section>
         <section class="imagesRow">
@@ -233,32 +255,42 @@
         </div>
     </section>
     <!--  SECTION 7   -->
+
     <section class="sectionSeven">
         <ul class="links">
             <li class="col-4 row">
-                <div class="btnPortfolio btnViewSectionSeven" type="submit"><a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i> TWITTER</a></div>
+                <div class="btnPortfolio btnViewSectionSeven" type="submit">
+                    <a href="#"></i> TWITTER</a>
+                </div>
             </li>
             <li class="col-4 row">
-                <div class="btnPortfolio btnViewSectionSeven" type="submit"><a href="#"> <i class="fa fa-facebook-square" aria-hidden="true"></i>FACEBOOK</a></div>
+                <div class="btnPortfolio btnViewSectionSeven" type="submit">
+                    <a href="#"> </i>FACEBOOK</a>
+                </div>
             </li>
             <li class="col-4 row">
-                <div class="btnPortfolio btnViewSectionSeven" type="submit"><a href="#"> <i class="fa fa-wikipedia-w" aria-hidden="true"></i> WONDERFUL MOMENTS</a></div>
+                <div class="btnPortfolio btnViewSectionSeven" type="submit">
+                    <a href="#">  INSTAGRAM</a>
+                </div>
             </li>
         </ul>
     </section>
     <!--  FOOTER   -->
-        <section class="footerParameters">
-            <div class="container row">
-                <i class="fa fa-map-marker fa-5x" aria-hidden="true"></i>
-                <p class="adress">ADDRESS: 4578 MARMORA ROAD, GLASGOW D04 89GR</p>
-                <p class="phone"> 800 2345-6789</p>
-            
-            <div class="copy"><p class="copyText">MATEUSZ BIENIEK © 2017 ALL RIGHTS RESERVED | PRIVACY POLICY</p></div>
+
+    <section class="footerParameters">
+        <div class="container row">
+            <i class="fa fa-map-marker fa-5x" aria-hidden="true"></i>
+            <p class="adress">ADDRESS: 4578 MARMORA ROAD, GLASGOW D04 89GR</p>
+            <p class="phone"> 800 2345-6789</p>
+
+            <div class="copy">
+                <p class="copyText">MATEUSZ BIENIEK © 2017 ALL RIGHTS RESERVED | PRIVACY POLICY</p>
             </div>
-        
-        
-        </section>
-        
+        </div>
+
+
+    </section>
+
 
 
 </body>

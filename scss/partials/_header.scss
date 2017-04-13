@@ -1,85 +1,176 @@
-.wrapper {
-    background: rgba(255, 255, 255, 0.2);
-    position: absolute;
-    z-index: 2;
-    left: 0;
-    right: 0;
-    top: 0;
-    width: 100%;
-}
-
-.barOne {
-    height: 183px;
-    @media (min-width: 600px) {
-    height: 123px;
+    $color: #e84b82;
+    $transition-time: .5s;
+    .wrapper {
+        background: rgba(255, 255, 255, 0.2);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+        right: 0px;
+        top: 0px;
+        width: 100%;
     }
-}
-
-.show-hide-menu {
-    color: white;
-    @media (min-width: 600px) {
-        display: none;
+    
+    .barOne {
+        height: 183px;
+        @media (min-width: 600px) {
+            height: 123px;
+        }
     }
-}
-
-.stickyBar {
-    .menu {
-        display: none;
-        @media (min-width: 650px) {
+    
+    .show-hide-menu {
+        color: white;
+        @media (min-width: 600px) {
+            display: none;
+        }
+    }
+    
+    .stickyBar {
+        .menu {
+            display: none;
+            @media (min-width: 650px) {
+                display: inline-block;
+                font-weight: 700;
+                top: 60%;
+                left: 55%;
+                position: absolute;
+                transition: 0.5s;
+            }
+        }
+        .testPosition {
+            @media (min-width: 650px) {
+                display: inline-block;
+                font-weight: 700;
+                top: 35%;
+                left: 55%;
+                position: absolute;
+                transition: 0.5s;
+            }
+        }
+        li {
             display: inline-block;
-            float: right;
-            font-weight: 700;
+            text-align: center;
+            color: white;
+            @media (min-width: 650px) {
+                display: inline-block;
+                font-size: 20px;
+                letter-spacing: 0.2px;
+                padding: 5px 28px 0px 0px;
+                color: white;
+            }
+        }
+        .hoverAnimation {
+            @media (min-width: 600px) {
+                color: white;
+                display: inline-block;
+                text-decoration: none;
+                overflow: hidden;
+                vertical-align: top;
+                -webkit-perspective: 600px;
+                -ms-perspective: 600px;
+                perspective: 600px;
+                -webkit-perspective-origin: 50% 50%;
+                -ms-perspective-origin: 50% 50%;
+                perspective-origin: 50% 50%;
+                &:hover span {
+                    background: $footerBtnRight;
+                    -webkit-transform: translate3d( 0px, 0px, -30px) rotateX( 90deg);
+                    -ms-transform: translate3d( 0px, 0px, -30px) rotateX( 90deg);
+                    transform: translate3d( 0px, 0px, -30px) rotateX( 90deg);
+                }
+                span {
+                    font-size: 21px;
+                    display: block;
+                    position: relative;
+                    padding: 0 3px;
+                    -webkit-transition: all .5s ease;
+                    -ms-transition: all .5s ease;
+                    transition: all .5s ease;
+                    -webkit-transform-origin: 50% 0%;
+                    -ms-transform-origin: 50% 0%;
+                    transform-origin: 50% 0%;
+                    -webkit-transform-style: preserve-3d;
+                    -ms-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+                    &:after {
+                        content: attr(data-title);
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        padding: 0 3px;
+                        color: #fff;
+                        background: $footerBtnRight;
+                        -webkit-transform-origin: 50% 0%;
+                        -ms-transform-origin: 50% 0%;
+                        transform-origin: 50% 0%;
+                        -webkit-transform: translate3d( 0px, 105%, 0px) rotateX( -90deg);
+                        -ms-transform: translate3d( 0px, 105%, 0px) rotateX( -90deg);
+                        transform: translate3d( 0px, 105%, 0px) rotateX( -90deg);
+                    }
+                }
+            }
         }
     }
-    li {
-        display: block;
-        text-align: center;
+    
+    .box {
+        background-color: orange;
+    }
+    
+    .showHideMenu {
+        width: 120px;
+        height: 50px;
+        border: 2px solid white;
         color: white;
-        @media (min-width: 650px) {
+        cursor: pointer;
         display: inline-block;
-        font-size: 20px;
-        letter-spacing: 0.2px;
-        padding: 5px 28px 0px 0px;
-        color: white;
+        margin: 105px 0px 0 calc(38% - 10px);
+        p {
+            text-align: center;
+            margin-top: calc(22% - 10px);
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        @media (min-width: 650px) {
+            display: none;
         }
     }
-}
-
-.box {
-    background-color: orange;
-}
-.showHideMenu {
-    width: 120px;
-    height: 50px;
-    border: 2px solid white;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    margin: 105px 0px 0 calc(38% - 10px);
-    p {
-        text-align: center;
-        margin-top: calc(22% - 10px);
-        letter-spacing: 2px;
-        font-weight: 600;
+    
+    .logo {
+        width: 250px;
+        height: 50px;
+        background-image: url("../images/podpis%20zdjec%20copy.PNG");
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        top: calc(50% - 55px);
+        left: calc(25% - 25px);
+        position: absolute;
+        @media (min-width: 650px) {
+            //        position: relative;
+            //        left: 0%;
+            //        top: 2.5em;
+            position: absolute;
+            left: 12%;
+            top: 3.5em;
+            transition: 0.5s;
+        }
     }
-    @media (min-width: 650px) {
-        display: none;
+    
+    .logoSticky {
+        top: calc(50% - 55px);
+        left: calc(35% - 93px);
+        transition: 1s;
+        @media (min-width: 650px) {
+            //        position: relative;
+            //        left: 0%;
+            //        top: 2.5em;
+            position: absolute;
+            left: 12%;
+            top: 0.5em;
+            transition: 0.5s;
+        }
     }
-}
-
-.logo {
-    width: 250px;
-    height: 50px;
-    background-image: url("../images/podpis%20zdjec%20copy.PNG");
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
-    top: calc(50% - 35px);
-    left:calc(25% - 25px);
-    position: absolute;
-    @media (min-width: 650px) {
-        position: relative;
-        left: 0%;
-        top: 2.5em;
-    }
-}
+    

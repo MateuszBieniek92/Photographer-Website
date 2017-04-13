@@ -1,10 +1,15 @@
 .sectionTwo {
-    height: 649px;
-    background-color: $sectionTwoColor;
+    height: 623px;
+    background-color: #3f3640;
     color: white;
     z-index: 2;
     position: absolute;
-    width: 100vw;
+    width: 100%;
+    top: 666px;
+    @media (min-width: 600px) {
+        height: 590px;
+        top: 950px;
+    }
 }
 
 .allText {
@@ -14,7 +19,6 @@
     @media (min-width: 600px) {
         width: 50%;
         display: inline-block;
-        margin: 60px 0;
     }
 }
 
@@ -57,7 +61,7 @@
     display: none;
     @media (min-width: 600px) {
         display: inline-block;
-        height: 649px;
+        height: 590px;
         background-image: url(../images/Produktowe_Roksana-1.jpg);
         background-size: 55% auto;
         background-attachment: fixed;

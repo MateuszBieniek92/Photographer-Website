@@ -1,6 +1,6 @@
 .sectionFour {
     height: 1113px;
-    width: 100vw;
+        width: 100%;
     top: 2739px;
     background-image: url("../images/backgroundFour.jpg");
     background-size: cover;
@@ -18,8 +18,8 @@
     }
     @media (min-width: 600px) {
         height: 913px;
-        width: 100vw;
-        top: 2282px;
+            width: 100%;
+        top: 2353px;
     }
 }
 

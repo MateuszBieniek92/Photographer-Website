@@ -1,6 +1,6 @@
 .sectionFive {
     height: 3013px;
-    width: 100vw;
+    width: 100%;
     top: 3852px;
     background-color: $sectionFiveColor;
     position: absolute;
@@ -12,9 +12,9 @@
         }
     }
     @media (min-width: 600px) {
-        height: 1805px;
-        width: 100vw;
-        top: 3194px;
+        height: 1865px;
+        width: 100%;
+        top: 3266px;
     }
 }
 
@@ -41,6 +41,15 @@
     }
 }
 
+.btnPortfolio:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+    background: white;
+    a {
+        color: $sectionFiveColor;
+    }
+}
+
 .btnsSectionFive {
     margin-bottom: 60px;
     @media (min-width: 600px) {
@@ -54,11 +63,11 @@
     display: flex;
     flex-direction: column;
     * {
-        width: 636px;
+        width: 375px;
         padding: 0;
         @media (min-width: 600px) {
-            height: 431px;
-            width: 636px;
+            height: 450px;
+            width: 634.5px;
         }
     }
     @media (min-width: 600px) {
@@ -70,19 +79,27 @@
 }
 
 .imOne {
-    width: 100vw;
+    width: 452px;
     height: 250px;
     img {
-        max-width: 100vw;
+        //max-width: 100%;
         background-size: contain;
         background-repeat: no-repeat;
+        opacity: 1;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
         @media (min-width: 600px) {
-            width: 636px;
+            // width: 532.5px;
             position: absolute;
         }
     }
+    img:hover {
+        filter: blur(2px);
+          filter:progid:DXImageTransform.Microsoft.Glow(Color=white,Strength=5);
+}   
+    
     @media (min-width: 600px) {
-        width: 636px;
+        width: 507.5px;
         height: 423px;
         position: absolute;
     }
@@ -90,10 +107,10 @@
 
 .btnView {
     margin-top: 30px;
-        padding: 15px 0;
+    padding: 15px 0;
     @media (min-width: 600px) {
         margin: 40px 0 0 calc(50% - 80px);
-         padding: 5px 0;
+        padding: 5px 0;
     }
 }
 
