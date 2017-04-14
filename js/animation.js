@@ -5,7 +5,51 @@ $(function () {
     var mobile = window.matchMedia("screen and (min-width: 600px) ");
     var $btn1 = $('.showHideMenu');
     var $list = $('.menu');
+    
+    /// sticky menu 
 
+    var $nav = $('nav');
+    var $sticky = $('.stickyBar');
+    var $ul = $sticky.find('.menu');
+    var $logo = $sticky.find('.logo');
+    var $menuBtn = $sticky.find('.showHideMenu');
+    var top = $sticky.offset().top;
+    
+    /// btns slider
+
+    var $btnRight = $('.sectionOne').find('.btnRight');
+    var $btnLeft = $('.sectionOne').find('.btnLeft');
+    var $photo = $('.sectionOne').find('.photo');
+    var time = 500;
+    var $array = $photo.find('li');
+    var $position = $array.index($('.visible'));
+    $array.first().addClass('visible');
+    $position = 0;
+    
+    
+    console.log($array);
+    
+   
+
+    function slide(auto) {
+        if (auto === true) {
+            $position++;
+            if ($position === 3) {
+                $position = 0;
+            }
+        }
+        $array.eq($position).css('opacity', 0);
+        $('.visible').animate({
+            opacity: 0
+        }, 2000, function () {
+            $(this).removeClass('visible');
+            $array.eq($position).addClass('visible').animate({
+                opacity: 1
+            }, 500);
+        })
+
+    }
+    
     $btn1.on('click', function () {
         $list.slideToggle().css('background-color', 'orange');
     });
@@ -18,28 +62,11 @@ $(function () {
     var $headBtn = $('.btnOne');
 
     $headBtn.on('click', function () {
-        $(this).slideToggle();
+        //$(this).slideToggle();
     });
 
 
-
-
-
-
-
-    /// sticky menu 
-
-
-    var $nav = $('nav');
-    var $sticky = $('.stickyBar');
-    // var $bar = $('.barOne');
-    var $ul = $sticky.find('.menu');
-    var $logo = $sticky.find('.logo');
-    var $menuBtn = $sticky.find('.showHideMenu');
-    var top = $sticky.offset().top;
-
-    //console.log($nav, $ul, top);
-
+    /// sticky bar
     $(window).on('scroll', function () {
         var pix = $(document).scrollTop();
 
@@ -54,6 +81,7 @@ $(function () {
             $logo.removeClass('logoSticky');
             $menuBtn.removeClass('mobileMenuPos');
         }
+         console.log(pix,top);
     })
 
     $(window).on('rezise', function () {
@@ -76,22 +104,10 @@ $(function () {
             $logo.removeClass('logoSticky');
         }
     });
+   
 
 
-
-    /// btns slider
-
-    var $btnRight = $('.sectionOne').find('.btnRight');
-    var $btnLeft = $('.sectionOne').find('.btnLeft');
-    var $photo = $('.sectionOne').find('.photo');
-    var time = 500;
-
-    var $array = $photo.find('li');
-    console.log($array);
-    $array.first().addClass('visible');
-
-
-
+    /// btns and slider
 
     var widthNext = $btnRight.outerWidth();
     $btnRight
@@ -109,13 +125,13 @@ $(function () {
             }, time);
         })
         .on('click', function () {
-            var $position = $array.index($('.visible')) + 1;
-            console.log($position);
+            $position += 1;
             if ($position === 3) {
                 $position = 0;
             }
-            $array.removeClass('visible').eq($position).addClass('visible');
+            slide();
         })
+
     var widthPrev = $btnLeft.outerWidth();
     $btnLeft
         .animate({
@@ -132,11 +148,20 @@ $(function () {
             }, time);
         })
         .on('click', function () {
-            var $position = $array.index($('.visible')) - 1;
-            console.log($position);
+            $position -= 1;
             if ($position === 3) {
                 $position = 0;
             }
-            $array.removeClass('visible').eq($position).addClass('visible');
+            slide();
         });
+
+    /// auto slider 
+    
+    setInterval(function() {
+        slide(true);
+        
+    }, 20000);
+
+
+
 });

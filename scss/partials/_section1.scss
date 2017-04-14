@@ -8,9 +8,9 @@
 }
 
 .photo {
+    
     list-style: none;
     li {
-        transition: 2s;
         display: none;
         .imgOne {
             top: 0;
@@ -60,7 +60,6 @@
     }
     .visible {
         display: inline-block;
-        transition: 2s;
     }
 }
 
@@ -73,7 +72,7 @@
     position: relative;
     left: -40px;
     top: calc(50% - 50px);
-    z-index: 999;
+    z-index: 900;
     span {
         color: white;
         font-size: 35px;
@@ -93,7 +92,7 @@
     position: relative;
     right: -40px;
     top: calc(50% - 50px);
-    z-index: 999;
+    z-index: 900;
     span {
         color: white;
         font-size: 35px;
@@ -174,44 +173,6 @@
     }
 }
 
-///
-//.sectionOne .prev-wrapper,
-//.sectionOne .next-wrapper {
-//    top: 50%;
-//    left: 0;
-//    margin-top: -25px;
-//    font-size: 30px;
-//    overflow: hidden;
-//}
-//
-//.next-wrapper span {
-//    background: rgba(255, 255, 255, 0.4);
-//    position: absolute;
-//    height: 140px;
-//    width: 50px;
-//    line-height: 50px;
-//    text-align: center;
-//    right: 0;
-//}
-//
-//.sectionOne .next-wrapper {
-//    right: -40px;
-//    left: auto;
-//}
-//
-//.sectionOne .prev,
-//.sectionOne .next {
-//    cursor: pointer;
-//    top: 360px;
-//}
-//
-//.sectionOne .next {
-//    right: 0;
-//}
-//
-//.sectionOne .prev {
-//    left: 0;
-//}
 .sticky {
     display: none;
     position: fixed;
