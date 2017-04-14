@@ -5,7 +5,7 @@ $(function () {
     var mobile = window.matchMedia("screen and (min-width: 600px) ");
     var $btn1 = $('.showHideMenu');
     var $list = $('.menu');
-    
+
     /// sticky menu 
 
     var $nav = $('nav');
@@ -14,7 +14,8 @@ $(function () {
     var $logo = $sticky.find('.logo');
     var $menuBtn = $sticky.find('.showHideMenu');
     var top = $sticky.offset().top;
-    
+    var $topBtn = $('.topBtn');
+
     /// btns slider
 
     var $btnRight = $('.sectionOne').find('.btnRight');
@@ -25,11 +26,11 @@ $(function () {
     var $position = $array.index($('.visible'));
     $array.first().addClass('visible');
     $position = 0;
-    
-    
+
+
     console.log($array);
-    
-   
+
+
 
     function slide(auto) {
         if (auto === true) {
@@ -47,9 +48,8 @@ $(function () {
                 opacity: 1
             }, 500);
         })
-
     }
-    
+
     $btn1.on('click', function () {
         $list.slideToggle().css('background-color', 'orange');
     });
@@ -57,13 +57,30 @@ $(function () {
         $(this).css('background-color', 'white').css('color', 'black');
     });
 
-    /// btn section 1
+    /// btn section 1 ->  scroll to section 2
 
     var $headBtn = $('.btnOne');
+    var body = $('body');
+    var topScroll = body.scrollTop();
 
     $headBtn.on('click', function () {
-        //$(this).slideToggle();
+        $('html, body').animate({
+            scrollTop: 894
+        }, 2000, function () {
+            console.log('bla');
+        });
     });
+    
+        /// top btn ->  scroll to header
+        $topBtn.on('click', function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 2000, function () {
+            console.log('bla');
+        });
+    });
+
+
 
 
     /// sticky bar
@@ -72,16 +89,18 @@ $(function () {
 
         if (pix > top) {
             $sticky.fadeIn("slow").addClass('sticky');
+            $topBtn.css('display', 'inline-block');
             $ul.addClass('testPosition');
             $logo.addClass('logoSticky');
             $menuBtn.addClass('mobileMenuPos');
         } else {
             $sticky.removeClass('sticky');
+            $topBtn.css('display', 'none');
             $ul.removeClass('testPosition');
             $logo.removeClass('logoSticky');
             $menuBtn.removeClass('mobileMenuPos');
         }
-         console.log(pix,top);
+        console.log(pix, top);
     })
 
     $(window).on('rezise', function () {
@@ -96,15 +115,17 @@ $(function () {
 
         if (pix > top) {
             $sticky.addClass('sticky');
+            $topBtn.css('display', 'inline-block');
             $ul.addClass('testPosition');
             $logo.addClass('logoSticky');
         } else {
             $sticky.removeClass('sticky');
+            $topBtn.css('display', 'none');
             $ul.removeClass('testPosition');
             $logo.removeClass('logoSticky');
         }
     });
-   
+
 
 
     /// btns and slider
@@ -156,12 +177,8 @@ $(function () {
         });
 
     /// auto slider 
-    
-    setInterval(function() {
+
+    setInterval(function () {
         slide(true);
-        
     }, 20000);
-
-
-
 });
