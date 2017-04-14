@@ -2,7 +2,7 @@
     height: 680px;
     width: 100%;
     top: 9272px;
-    background-image: url("../images/footer back.jpg");
+    background-image: url("../images/footer back-min.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -33,7 +33,7 @@
     }
     @media (min-width: 600px) {
         top: 6296px;
-         width: 100%;
+        width: 100%;
     }
 }
 
@@ -53,9 +53,18 @@
     .copyText {
         color: white;
         font-size: 1em;
-        margin: calc(25% - 20px) 0;
+        margin: calc(25% - 20px) 0 0 0;
         @media (min-width: 600px) {
-            margin: calc(5% - 20px) 0;
+            margin: 55px 0 0 0;
+            font-size: 1.5em;
+        }
+    }
+    a {
+        margin-left: 5px;
+        .icons {
+            color: white;
+            margin: 0;
+            font-size: 1.5em;
         }
     }
 }

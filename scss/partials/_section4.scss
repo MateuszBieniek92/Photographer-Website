@@ -2,7 +2,7 @@
     height: 1113px;
         width: 100%;
     top: 2739px;
-    background-image: url("../images/backgroundFour.jpg");
+    background-image: url("../images/backgroundFour-min.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -71,7 +71,7 @@
         margin-top: 20px;
         color: white;
     }
-        .active {
+    .active {
         width: 20px;
         height: 20px;
         margin-left: 20px;
@@ -82,4 +82,8 @@
     @media (min-width: 600px) {
         padding: 0 calc(50% - 30px);
     }
+} 
+
+.sliderSectionFour {
+    list-style-type: none;
 }

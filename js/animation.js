@@ -28,7 +28,7 @@ $(function () {
     $position = 0;
 
 
-    console.log($array);
+    //console.log($array);
 
 
 
@@ -65,7 +65,7 @@ $(function () {
 
     $headBtn.on('click', function () {
         $('html, body').animate({
-            scrollTop: 894
+            scrollTop: 892
         }, 2000, function () {
             console.log('bla');
         });
@@ -76,7 +76,7 @@ $(function () {
         $('html, body').animate({
             scrollTop: 0
         }, 2000, function () {
-            console.log('bla');
+            //console.log('bla');
         });
     });
 
@@ -100,7 +100,7 @@ $(function () {
             $logo.removeClass('logoSticky');
             $menuBtn.removeClass('mobileMenuPos');
         }
-        console.log(pix, top);
+        //console.log(pix, top);
     })
 
     $(window).on('rezise', function () {
@@ -181,4 +181,40 @@ $(function () {
     setInterval(function () {
         slide(true);
     }, 20000);
+    
+    
+    
+   /// slider section 4 
+    
+    var $sectionFourBtnOne = $('.circlesUl').children().first();
+    var $sectionFourBtnTwo = $('.circlesUl').children().eq(1);
+    var $sectionFourBtnThree = $('.circlesUl').children().last();
+    
+    var $liOne = $('.sliderSectionFour').children().first();
+    var $liTwo = $('.sliderSectionFour').children().eq(1);
+    var $liThree = $('.sliderSectionFour').children().last(1);
+    
+    
+//    console.log($sectionFourBtnOne, $sectionFourBtnTwo, $sectionFourBtnThree);
+//    console.log($liOne, $liTwo, $liThree);
+//    
+//    $sectionFourBtnTwo.on('click', function() {
+//        $liOne.removeClass('smallCircles').removeClass('active').css('display','none');
+//        $liTwo.addClass('active').css('display','inline-block');
+//        $liThree.removeClass('smallCircles').removeClass('active').css('display','none');
+//        
+//        
+//        
+//        
+//    })
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 });
