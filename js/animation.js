@@ -27,6 +27,15 @@ $(function () {
     $array.first().addClass('visible');
     $position = 0;
 
+    /// menu btns
+
+    var $menuOne = $('.menu').children().eq(0);
+    var $menuTwo = $('.menu').children().eq(1);
+    var $menuThree = $('.menu').children().eq(2);
+    var $menuFour = $('.menu').children().eq(3);
+    var $menuFive = $('.menu').children().eq(4);
+
+    console.log($menuOne, $menuTwo);
 
     //console.log($array);
 
@@ -66,21 +75,45 @@ $(function () {
     $headBtn.on('click', function () {
         $('html, body').animate({
             scrollTop: 892
-        }, 2000, function () {
-            console.log('bla');
-        });
+        }, 2000);
     });
-    
-        /// top btn ->  scroll to header
-        $topBtn.on('click', function () {
+
+    /// top btn ->  scroll to header
+    $topBtn.on('click', function () {
         $('html, body').animate({
             scrollTop: 0
-        }, 2000, function () {
-            //console.log('bla');
-        });
+        }, 2000);
     });
-
-
+    /// home btn ->  scroll to header
+    $menuOne.on('click', function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 2000);
+    });
+    /// o mnie btn ->  scroll to o mnie
+    $menuTwo.on('click', function () {
+        $('html, body').animate({
+            scrollTop: 892
+        }, 2000);
+    });
+    /// services btn ->  scroll to services
+    $menuThree.on('click', function () {
+        $('html, body').animate({
+            scrollTop: 1528
+        }, 2000);
+    });
+    /// portfolio btn ->  scroll to portfolio
+    $menuFour.on('click', function () {
+        $('html, body').animate({
+            scrollTop: 3227
+        }, 2000);
+    });
+    /// kontakt btn ->  scroll to kontakt
+    $menuFive.on('click', function () {
+        $('html, body').animate({
+            scrollTop: 6043
+        }, 2000);
+    });
 
 
     /// sticky bar
@@ -100,7 +133,7 @@ $(function () {
             $logo.removeClass('logoSticky');
             $menuBtn.removeClass('mobileMenuPos');
         }
-        //console.log(pix, top);
+        console.log(pix, top);
     })
 
     $(window).on('rezise', function () {
@@ -181,40 +214,39 @@ $(function () {
     setInterval(function () {
         slide(true);
     }, 20000);
-    
-    
-    
-   /// slider section 4 
-    
+
+
+
+    /// slider section 4 
+
     var $sectionFourBtnOne = $('.circlesUl').children().first();
     var $sectionFourBtnTwo = $('.circlesUl').children().eq(1);
     var $sectionFourBtnThree = $('.circlesUl').children().last();
-    
+
     var $liOne = $('.sliderSectionFour').children().first();
     var $liTwo = $('.sliderSectionFour').children().eq(1);
     var $liThree = $('.sliderSectionFour').children().last(1);
-    
-    
-//    console.log($sectionFourBtnOne, $sectionFourBtnTwo, $sectionFourBtnThree);
-//    console.log($liOne, $liTwo, $liThree);
-//    
-//    $sectionFourBtnTwo.on('click', function() {
-//        $liOne.removeClass('smallCircles').removeClass('active').css('display','none');
-//        $liTwo.addClass('active').css('display','inline-block');
-//        $liThree.removeClass('smallCircles').removeClass('active').css('display','none');
-//        
-//        
-//        
-//        
-//    })
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+    //    console.log($sectionFourBtnOne, $sectionFourBtnTwo, $sectionFourBtnThree);
+    //    console.log($liOne, $liTwo, $liThree);
+    //    
+    //    $sectionFourBtnTwo.on('click', function() {
+    //        $liOne.removeClass('smallCircles').removeClass('active').css('display','none');
+    //        $liTwo.addClass('active').css('display','inline-block');
+    //        $liThree.removeClass('smallCircles').removeClass('active').css('display','none');
+    //        
+    //        
+    //        
+    //        
+    //    })
+
+
+
+
+
+
+
+
+
 });

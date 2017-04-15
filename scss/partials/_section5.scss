@@ -55,7 +55,7 @@
     @media (min-width: 600px) {
         display: flex;
         flex-direction: row;
-        margin-left: calc(24% - 10px);
+        margin-left: calc(50% - 324px);
     }
 }
 
@@ -79,7 +79,7 @@
 }
 
 .imOne {
-    width: 452px;
+    width: 374px;
     height: 250px;
     img {
         //max-width: 100%;
@@ -95,9 +95,7 @@
     }
     img:hover {
         filter: blur(2px);
-          filter:progid:DXImageTransform.Microsoft.Glow(Color=white,Strength=5);
-}   
-    
+    }
     @media (min-width: 600px) {
         width: 507.5px;
         height: 423px;

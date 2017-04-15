@@ -8,7 +8,6 @@
 }
 
 .photo {
-    
     list-style: none;
     li {
         display: none;
@@ -19,7 +18,7 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
-            background-image: url("../images/wybrane/Natalia_Tarnawska-11.jpg");
+            background-image: url("../images/galeria/Natalia_Tarnawska-11-min-min.jpg");
             height: 100vh;
             width: 99%;
             @media (min-width: 600px) {
@@ -34,7 +33,7 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
-            background-image: url("../images/galeria/Anna_Moskal-13-min.jpg");
+            background-image: url("../images/galeria/Anna_Moskal-13-min-min.jpg");
             height: 101vh;
             width: 99%;
             @media (min-width: 600px) {
@@ -49,7 +48,7 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
-            background-image: url("../images/galeria/Aleksandra_Los-17-min.jpg");
+            background-image: url("../images/galeria/Aleksandra_Los-17-min-min.jpg");
             height: 101vh;
             width: 99%;
             @media (min-width: 600px) {
@@ -83,7 +82,8 @@
     }
 }
 
-.btnLeft:hover, .btnRight:hover{
+.btnLeft:hover,
+.btnRight:hover {
     background: rgba(255, 255, 255, 0.6);
 }
 
@@ -123,6 +123,7 @@
     margin-top: 140px;
     margin-left: calc(50% - 90px);
     @media (min-width: 600px) {
+        margin-left: calc(40% - 320px);
         font-size: 90px;
         margin: 250px 0 0 150px;
     }
@@ -133,8 +134,9 @@
     font-weight: 600;
     color: white;
     font-size: 16px;
-    margin: 10px calc(50% - 150px);
+    margin: 10px calc(50% - 150px)0;
     @media (min-width: 600px) {
+        margin-left: calc(40% - 195px);
         font-size: 34px;
         margin: 0 0 0 265px;
     }
@@ -148,15 +150,14 @@
     height: 50px;
     padding: 11px 24px;
     margin: 70px 0 0 127px;
+    margin-left: calc(42% - 20px);
     span {
         color: white;
         font-size: 18px;
     }
-    @media (min-width: 600px) {
+    @media (min-width: 600px) {      
         height: 70px;
         width: 220px;
-        margin-left: 270px;
-        margin-left: 475px;
         margin-top: 75px;
         padding: 17px 58px;
         span {
@@ -181,7 +182,7 @@
     display: none;
     position: fixed;
     width: 100%;
-    background-color: #3f3640;
+    background-color: $headerSectionThree;
     top: 0;
     height: 120px;
     left: 0;
@@ -195,6 +196,5 @@
 }
 
 .mobileMenuPos {
-margin: 65px 0px 0 calc(50% - 100px);
+    margin: 65px 0px 0 calc(50% - 100px);
 }
-
