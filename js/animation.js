@@ -2,7 +2,7 @@ $(function () {
 
     /// btn menu mobile    
 
-    var mobile = window.matchMedia("screen and (min-width: 600px) ");
+    var mobile = window.matchMedia("screen and (max-width: 600px)");
     var $btn1 = $('.showHideMenu');
     var $list = $('.menu');
 
@@ -133,7 +133,7 @@ $(function () {
             $logo.removeClass('logoSticky');
             $menuBtn.removeClass('mobileMenuPos');
         }
-        console.log(pix, top);
+        // console.log(pix, top);
     })
 
     $(window).on('rezise', function () {
@@ -163,51 +163,83 @@ $(function () {
 
     /// btns and slider
 
-    var widthNext = $btnRight.outerWidth();
-    $btnRight
-        .animate({
-            right: -(widthNext - 10) + 'px'
-        }, time * 3)
-        .on('mouseenter', function () {
-            $(this).stop().animate({
-                right: 0
-            }, time);
-        })
-        .on('mouseout', function () {
-            $(this).stop().animate({
-                right: -(widthNext - 10) + 'px'
-            }, time);
-        })
-        .on('click', function () {
-            $position += 1;
-            if ($position === 3) {
-                $position = 0;
-            }
-            slide();
-        })
+    var ravenous = function () {
 
-    var widthPrev = $btnLeft.outerWidth();
-    $btnLeft
-        .animate({
-            left: -(widthPrev - 10) + 'px'
-        }, time * 3)
-        .on('mouseenter', function () {
-            $(this).stop().animate({
-                left: 0
-            }, time);
-        })
-        .on('mouseout', function () {
-            $(this).stop().animate({
-                left: -(widthPrev - 10) + 'px'
-            }, time);
-        })
-        .on('click', function () {
-            $position -= 1;
-            if ($position === 3) {
-                $position = 0;
-            }
-            slide();
-        });
+        if (mobile.matches) {
+            var widthNext = $btnRight.outerWidth();
+            $btnRight
+                .on('click', function () {
+                    $position += 1;
+                    if ($position === 3) {
+                        $position = 0;
+                    }
+                    slide();
+                })
+
+            var widthPrev = $btnLeft.outerWidth();
+            $btnLeft
+                .on('click', function () {
+                    $position -= 1;
+                    if ($position === 3) {
+                        $position = 0;
+                    }
+                    slide();
+                });
+        } else {
+
+            var widthNext = $btnRight.outerWidth();
+            $btnRight
+                .animate({
+                    right: -(widthNext - 10) + 'px'
+                }, time * 3)
+                .on('mouseenter', function () {
+                    $(this).stop().animate({
+                        right: 0
+                    }, time);
+                })
+                .on('mouseout', function () {
+                    $(this).stop().animate({
+                        right: -(widthNext - 10) + 'px'
+                    }, time);
+                })
+                .on('click', function () {
+                    $position += 1;
+                    if ($position === 3) {
+                        $position = 0;
+                    }
+                    slide();
+                })
+
+            var widthPrev = $btnLeft.outerWidth();
+            $btnLeft
+                .animate({
+                    left: -(widthPrev - 10) + 'px'
+                }, time * 3)
+                .on('mouseenter', function () {
+                    $(this).stop().animate({
+                        left: 0
+                    }, time);
+                })
+                .on('mouseout', function () {
+                    $(this).stop().animate({
+                        left: -(widthPrev - 10) + 'px'
+                    }, time);
+                })
+                .on('click', function () {
+                    $position -= 1;
+                    if ($position === 3) {
+                        $position = 0;
+                    }
+                    slide();
+                });
+        }
+    };
+
+
+    $(window).resize(ravenous);
+    ravenous();
+
+
 
     /// auto slider 
 
@@ -228,24 +260,49 @@ $(function () {
     var $liThree = $('.sliderSectionFour').children().last(1);
 
 
-    //    console.log($sectionFourBtnOne, $sectionFourBtnTwo, $sectionFourBtnThree);
-    //    console.log($liOne, $liTwo, $liThree);
-    //    
-    //    $sectionFourBtnTwo.on('click', function() {
-    //        $liOne.removeClass('smallCircles').removeClass('active').css('display','none');
-    //        $liTwo.addClass('active').css('display','inline-block');
-    //        $liThree.removeClass('smallCircles').removeClass('active').css('display','none');
-    //        
-    //        
-    //        
-    //        
-    //    })
+    console.log($sectionFourBtnOne, $sectionFourBtnTwo, $sectionFourBtnThree);
+    console.log($liOne, $liTwo, $liThree);
 
+    $liOne.fadeIn(1000).css('display', 'inline-block');
+    $liTwo.css('display', 'none');
+    $liThree.css('display', 'none');
 
+    $sectionFourBtnOne.addClass('active');
+    $sectionFourBtnTwo.removeClass('active');
+    $sectionFourBtnThree.removeClass('active');
 
+    $sectionFourBtnOne.on('click', function () {
 
+        $liOne.fadeIn(1000).css('display', 'inline-block');
+        $liTwo.css('display', 'none');
+        $liThree.css('display', 'none');
 
+        $(this).addClass('active');
+        $sectionFourBtnTwo.removeClass('active');
+        $sectionFourBtnThree.removeClass('active');
+    })
 
+    $sectionFourBtnTwo.on('click', function () {
+
+        $liOne.css('display', 'none');
+        $liTwo.fadeIn(1000).css('display', 'inline-block');
+        $liThree.css('display', 'none');
+
+        $sectionFourBtnOne.removeClass('active');
+        $(this).addClass('active');
+        $sectionFourBtnThree.removeClass('active');
+
+    })
+
+    $sectionFourBtnThree.on('click', function () {
+        $liOne.css('display', 'none');
+        $liTwo.css('display', 'none');
+        $liThree.fadeIn(1000).css('display', 'inline-block');
+
+        $sectionFourBtnOne.removeClass('active');
+        $sectionFourBtnTwo.removeClass('active');
+        $(this).addClass('active');
+    })
 
 
 

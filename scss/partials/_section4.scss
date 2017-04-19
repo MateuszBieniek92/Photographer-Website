@@ -1,6 +1,6 @@
 .sectionFour {
     height: 1113px;
-        width: 100%;
+    width: 100%;
     top: 2739px;
     background-image: url("../images/backgroundFour-min.jpg");
     background-size: cover;
@@ -18,7 +18,7 @@
     }
     @media (min-width: 600px) {
         height: 913px;
-            width: 100%;
+        width: 100%;
         top: 2353px;
     }
 }
@@ -42,7 +42,7 @@
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    background-image: url("../images/galeria/Aleksandra_Los-15-1.jpg");
+    background-image: url("../images/galeria/Aleksandra_Los-15-1-min.jpg");
     background-size: 100% auto;
     margin: 75px 0 0 calc(50% - 103px);
 }
@@ -62,27 +62,26 @@
 
 .circlesUl {
     display: flex;
-    padding: 0 calc(50% - 25px);
-    cursor: pointer;
-    .smallCircles {
+    flex-direction: row;
+    list-style: none;
+    margin: 20px calc(50% - 20px);
+    li {
+        margin-right: 5px;
+        z-index: 500;
+        border-radius: 50%;
         width: 5px;
         height: 5px;
-        margin-left: 20px;
-        margin-top: 20px;
-        color: white;
+        background: white;
     }
     .active {
-        width: 20px;
-        height: 20px;
-        margin-left: 20px;
-        margin-top: 20px;
-        color: orange;
+        z-index: 500;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: $sectionFiveColor;
+        margin: -5px 5px 0 0;
     }
-    
-    @media (min-width: 600px) {
-        padding: 0 calc(50% - 30px);
-    }
-} 
+}
 
 .sliderSectionFour {
     list-style-type: none;

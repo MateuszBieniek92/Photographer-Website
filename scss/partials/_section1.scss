@@ -20,7 +20,7 @@
             background-position: center;
             background-image: url("../images/galeria/Natalia_Tarnawska-11-min-min.jpg");
             height: 100vh;
-            width: 99%;
+            width: 100%;
             @media (min-width: 600px) {
                 height: 101vh;
                 width: 100%;
@@ -35,7 +35,7 @@
             background-position: center;
             background-image: url("../images/galeria/Anna_Moskal-13-min-min.jpg");
             height: 101vh;
-            width: 99%;
+            width: 100%;
             @media (min-width: 600px) {
                 height: 100vh;
                 width: 100%;
@@ -50,7 +50,7 @@
             background-position: center;
             background-image: url("../images/galeria/Aleksandra_Los-17-min-min.jpg");
             height: 101vh;
-            width: 99%;
+            width: 100%;
             @media (min-width: 600px) {
                 height: 100vh;
                 width: 100%;
@@ -63,13 +63,13 @@
 }
 
 .btnLeft {
+    left: 0px;
     width: 50px;
     cursor: pointer;
     float: left;
     height: 130px;
     background: rgba(255, 255, 255, 0.2);
     position: relative;
-    left: -40px;
     top: calc(50% - 50px);
     z-index: 900;
     span {
@@ -88,24 +88,28 @@
 }
 
 .btnRight {
-    width: 50px;
-    cursor: pointer;
-    float: right;
-    height: 130px;
-    background: rgba(255, 255, 255, 0.2);
-    position: relative;
-    right: -40px;
-    top: calc(50% - 50px);
-    z-index: 900;
-    span {
-        color: white;
-        font-size: 35px;
-        top: calc(50% - 22px);
-        position: absolute;
-        margin-left: calc(50% - 12px);
-        z-index: 999;
+        width: 50px;
+        cursor: pointer;
+        float: right;
+        height: 130px;
+        background: rgba(255, 255, 255, 0.2);
+        position: relative;
+        right: 0px;
+        top: calc(50% - 50px);
+        z-index: 900;
+        span {
+            color: white;
+            font-size: 35px;
+            top: calc(50% - 22px);
+            position: absolute;
+            margin-left: calc(50% - 12px);
+            z-index: 999;
+        }
+    @media (min-width: 600px) {
+                right: -40px;
+            }
+    
     }
-}
 
 .position {
     position: absolute;
@@ -148,18 +152,18 @@
     cursor: pointer;
     width: 120px;
     height: 50px;
-    padding: 11px 24px;
+    padding: calc(9% - 20px) calc(15% - 25px);
     margin: 70px 0 0 127px;
-    margin-left: calc(42% - 20px);
+    margin-left: calc(41% - 20px);
     span {
         color: white;
         font-size: 18px;
     }
-    @media (min-width: 600px) {      
+    @media (min-width: 600px) {
         height: 70px;
         width: 220px;
         margin-top: 75px;
-        padding: 17px 58px;
+            padding: calc(3% - 20px) calc(10% - 20px);
         span {
             text-align: center;
             margin-left: calc(50% - 40px);
@@ -196,5 +200,5 @@
 }
 
 .mobileMenuPos {
-    margin: 65px 0px 0 calc(50% - 100px);
+       margin: 65px 0px 0 calc(38% - 10px);
 }

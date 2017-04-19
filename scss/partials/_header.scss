@@ -146,7 +146,7 @@
         background-repeat: no-repeat;
         display: inline-block;
         top: calc(50% - 55px);
-        left: calc(25% - 25px);
+        left: calc(24% - 25px);
         position: absolute;
         @media (min-width: 650px) {
             //        position: relative;
@@ -160,13 +160,12 @@
     }
     
     .logoSticky {
+//        top: calc(50% - 55px);
+//        left: calc(39% - 93px);
         top: calc(50% - 55px);
-        left: calc(35% - 93px);
+    left: calc(24% - 25px);
         transition: 1s;
         @media (min-width: 650px) {
-            //        position: relative;
-            //        left: 0%;
-            //        top: 2.5em;
             position: absolute;
             left: 12%;
             top: 0.5em;

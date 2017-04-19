@@ -231,7 +231,7 @@
   background-repeat: no-repeat;
   display: inline-block;
   top: calc(50% - 55px);
-  left: calc(25% - 25px);
+  left: calc(24% - 25px);
   position: absolute; }
   @media (min-width: 650px) {
     .logo {
@@ -242,7 +242,7 @@
 
 .logoSticky {
   top: calc(50% - 55px);
-  left: calc(35% - 93px);
+  left: calc(24% - 25px);
   transition: 1s; }
   @media (min-width: 650px) {
     .logoSticky {
@@ -294,7 +294,7 @@
       background-position: center;
       background-image: url("../images/galeria/Natalia_Tarnawska-11-min-min.jpg");
       height: 100vh;
-      width: 99%; }
+      width: 100%; }
       @media (min-width: 600px) {
         .photo li .imgOne {
           height: 101vh;
@@ -308,7 +308,7 @@
       background-position: center;
       background-image: url("../images/galeria/Anna_Moskal-13-min-min.jpg");
       height: 101vh;
-      width: 99%; }
+      width: 100%; }
       @media (min-width: 600px) {
         .photo li .imgTwo {
           height: 100vh;
@@ -322,7 +322,7 @@
       background-position: center;
       background-image: url("../images/galeria/Aleksandra_Los-17-min-min.jpg");
       height: 101vh;
-      width: 99%; }
+      width: 100%; }
       @media (min-width: 600px) {
         .photo li .imgThree {
           height: 100vh;
@@ -331,13 +331,13 @@
     display: inline-block; }
 
 .btnLeft {
+  left: 0px;
   width: 50px;
   cursor: pointer;
   float: left;
   height: 130px;
   background: rgba(255, 255, 255, 0.2);
   position: relative;
-  left: -40px;
   top: calc(50% - 50px);
   z-index: 900; }
   .btnLeft span {
@@ -359,7 +359,7 @@
   height: 130px;
   background: rgba(255, 255, 255, 0.2);
   position: relative;
-  right: -40px;
+  right: 0px;
   top: calc(50% - 50px);
   z-index: 900; }
   .btnRight span {
@@ -369,6 +369,9 @@
     position: absolute;
     margin-left: calc(50% - 12px);
     z-index: 999; }
+  @media (min-width: 600px) {
+    .btnRight {
+      right: -40px; } }
 
 .position {
   position: absolute;
@@ -408,9 +411,9 @@
   cursor: pointer;
   width: 120px;
   height: 50px;
-  padding: 11px 24px;
+  padding: calc(9% - 20px) calc(15% - 25px);
   margin: 70px 0 0 127px;
-  margin-left: calc(42% - 20px); }
+  margin-left: calc(41% - 20px); }
   .btnOne span {
     color: white;
     font-size: 18px; }
@@ -419,7 +422,7 @@
       height: 70px;
       width: 220px;
       margin-top: 75px;
-      padding: 17px 58px; }
+      padding: calc(3% - 20px) calc(10% - 20px); }
       .btnOne span {
         text-align: center;
         margin-left: calc(50% - 40px);
@@ -450,20 +453,20 @@
       height: 60px; } }
 
 .mobileMenuPos {
-  margin: 65px 0px 0 calc(50% - 100px); }
+  margin: 65px 0px 0 calc(38% - 10px); }
 
 .sectionTwo {
-  height: 623px;
+  height: 650px;
   background-color: #3f3640;
   color: white;
   z-index: 2;
   position: absolute;
   width: 100%;
-  top: 666px; }
+  top: 639px; }
   @media (min-width: 600px) {
     .sectionTwo {
       height: 639px;
-      top: 950px; } }
+      top: 949px; } }
 
 .allText * {
   width: 100%; }
@@ -636,7 +639,7 @@
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  background-image: url("../images/galeria/Aleksandra_Los-15-1.jpg");
+  background-image: url("../images/galeria/Aleksandra_Los-15-1-min.jpg");
   background-size: 100% auto;
   margin: 75px 0 0 calc(50% - 103px); }
 
@@ -653,23 +656,23 @@
 
 .circlesUl {
   display: flex;
-  padding: 0 calc(50% - 25px);
-  cursor: pointer; }
-  .circlesUl .smallCircles {
+  flex-direction: row;
+  list-style: none;
+  margin: 20px calc(50% - 20px); }
+  .circlesUl li {
+    margin-right: 5px;
+    z-index: 500;
+    border-radius: 50%;
     width: 5px;
     height: 5px;
-    margin-left: 20px;
-    margin-top: 20px;
-    color: white; }
+    background: white; }
   .circlesUl .active {
-    width: 20px;
-    height: 20px;
-    margin-left: 20px;
-    margin-top: 20px;
-    color: orange; }
-  @media (min-width: 600px) {
-    .circlesUl {
-      padding: 0 calc(50% - 30px); } }
+    z-index: 500;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #ec9c5c;
+    margin: -5px 5px 0 0; }
 
 .sliderSectionFour {
   list-style-type: none; }
