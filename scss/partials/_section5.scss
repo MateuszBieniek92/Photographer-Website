@@ -59,17 +59,14 @@
     }
 }
 
+.col-4 {
+    padding: 0;
+}
+
 .imagesRow {
     display: flex;
     flex-direction: column;
-    * {
-        width: 375px;
-        padding: 0;
-        @media (min-width: 600px) {
-            height: 450px;
-            width: 634.5px;
-        }
-    }
+    padding: 0;
     @media (min-width: 600px) {
         flex-direction: row;
         top: 0;
@@ -78,29 +75,59 @@
     }
 }
 
+
 .imOne {
     width: 374px;
     height: 250px;
     img {
-        //max-width: 100%;
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 1;
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
-        @media (min-width: 600px) {
-            // width: 532.5px;
-            position: absolute;
-        }
-    }
-    img:hover {
-        filter: blur(2px);
+        background-size: cover;
+        width: 100%;
+        height: 250px;
+        position: relative;
+        box-sizing: border-box;
+        transition: all 500ms ease;
     }
     @media (min-width: 600px) {
-        width: 507.5px;
-        height: 423px;
-        position: absolute;
+        width: 636px;
+        height: 431px;
+        img {
+            height: 431px;
+        }
     }
+    
+    .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+     width: 40em;
+    height: 0;
+    transition: .5s ease;
+    z-index: 990;
+}
+
+.test {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+    
+}
+
+.imagesRow img:hover .overlay {
+    bottom: 0;
+    height: 100%;
+    z-index: 990;
 }
 
 .btnView {
@@ -109,6 +136,17 @@
     @media (min-width: 600px) {
         margin: 40px 0 0 calc(50% - 80px);
         padding: 5px 0;
+    }
+}
+
+.test {
+    width: 374px;
+    height: 250px;
+    opacity: 1;
+    color: white;
+    @media (min-width: 600px) {
+        width: 636px;
+        height: 431px;
     }
 }
 
