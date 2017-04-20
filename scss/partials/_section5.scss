@@ -27,7 +27,10 @@
     display: inline-block;
     margin: 3px 0;
     text-align: center;
-    padding-top: calc(50% - 170px);
+    //padding-top: calc(50% - 170px);
+    padding-top: calc(10% - 21px);
+    font-size: 20px;
+    font-weight: 600;
     a {
         color: white;
         text-decoration: none;
@@ -45,6 +48,7 @@
     transform: scale(1.2);
     transition: 0.5s;
     background: white;
+     color: $sectionFiveColor;
     a {
         color: $sectionFiveColor;
     }
