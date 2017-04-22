@@ -3,6 +3,7 @@ $(function () {
     /// btn menu mobile    
 
     var mobile = window.matchMedia("screen and (max-width: 600px)");
+    var mobileTop = window.matchMedia("screen and (min-width: 1000px)");
     var $btn1 = $('.showHideMenu');
     var $list = $('.menu');
 
@@ -238,8 +239,6 @@ $(function () {
 
     $(window).resize(ravenous);
     ravenous();
-
-
 
     /// auto slider 
 

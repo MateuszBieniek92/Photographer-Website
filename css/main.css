@@ -285,7 +285,7 @@
 
 .topBtn {
   display: none; }
-  @media (min-width: 450px) {
+  @media (min-width: 1000px) {
     .topBtn {
       transition: 2s;
       width: 50px;
@@ -527,11 +527,14 @@
   font-size: 35px;
   font-weight: 400;
   margin: 32px 6px; }
-  @media (min-width: 600px) {
+  @media (min-width: 450px) {
     .headerSectionTwo {
       font-size: 65px;
-      margin: 42px 6px;
+      margin: 25px 6px;
       font-weight: 600; } }
+  @media (min-width: 1000px) {
+    .headerSectionTwo {
+      margin: 42px 6px; } }
 
 .beltSectionTwo {
   width: 120px;
@@ -556,16 +559,20 @@
 
 .imageSectionTwo {
   display: none; }
-  @media (min-width: 600px) {
+  @media (min-width: 450px) {
     .imageSectionTwo {
       display: inline-block;
       height: 639px;
       background-image: url(../images/Produktowe_Roksana-1-min.jpg);
-      background-size: 55% auto;
+      background-size: 103% auto;
       background-attachment: fixed;
-      background-position: 95% 0%;
+      background-position: -953% -38%;
       background-repeat: no-repeat;
       float: right; } }
+  @media (min-width: 1000px) {
+    .imageSectionTwo {
+      background-size: 55% auto;
+      background-position: 95% 0%; } }
 
 .sectionThree {
   height: 1450px;
@@ -602,17 +609,26 @@
   margin: -35px 0 55px calc(50% - 60px); }
   @media (min-width: 600px) {
     .bar {
+      margin: -55px 0 60px calc(50% - 60px); } }
+  @media (min-width: 1000px) {
+    .bar {
       margin: -55px 0 80px calc(50% - 60px); } }
 
 .icones {
   display: flex;
   flex-direction: column;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  width: 90%; }
   .icones * {
     width: 100%; }
-  @media (min-width: 600px) {
+  @media (min-width: 451px) {
     .icones {
-      flex-direction: row; } }
+      flex-direction: row;
+      width: 85%;
+      margin-left: 25px; } }
+  @media (min-width: 1000px) {
+    .icones {
+      width: 100%; } }
 
 .iconesTwo {
   display: flex;
@@ -641,11 +657,15 @@
     float: right;
     font-size: 15px;
     font-weight: 200;
-    text-align: justify; }
+    text-align: justify;
+    margin-bottom: 25px; }
     .text p span {
       font-size: 20px;
       font-weight: 600;
       color: #3f3640; }
+    @media (min-width: 451px) {
+      .text p {
+        margin-bottom: 0; } }
 
 .text:hover i {
   transform: rotateY(180deg);

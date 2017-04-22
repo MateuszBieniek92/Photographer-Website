@@ -200,7 +200,7 @@ $transition-time: .5s;
 
 .topBtn {
     display: none;
-    @media (min-width: 450px) {
+    @media (min-width: 1000px) {
         transition: 2s;
         width: 50px;
         height: 50px;
