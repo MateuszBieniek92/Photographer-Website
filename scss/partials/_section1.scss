@@ -88,28 +88,27 @@
 }
 
 .btnRight {
-        width: 50px;
-        cursor: pointer;
-        float: right;
-        height: 130px;
-        background: rgba(255, 255, 255, 0.2);
-        position: relative;
-        right: 0px;
-        top: calc(50% - 50px);
-        z-index: 900;
-        span {
-            color: white;
-            font-size: 35px;
-            top: calc(50% - 22px);
-            position: absolute;
-            margin-left: calc(50% - 12px);
-            z-index: 999;
-        }
-    @media (min-width: 600px) {
-                right: -40px;
-            }
-    
+    width: 50px;
+    cursor: pointer;
+    float: right;
+    height: 130px;
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+    right: 0px;
+    top: calc(50% - 50px);
+    z-index: 900;
+    span {
+        color: white;
+        font-size: 35px;
+        top: calc(50% - 22px);
+        position: absolute;
+        margin-left: calc(50% - 12px);
+        z-index: 999;
     }
+    @media (min-width: 600px) {
+        right: -40px;
+    }
+}
 
 .position {
     position: absolute;
@@ -126,9 +125,12 @@
     font-size: 40px;
     margin-top: 140px;
     margin-left: calc(50% - 90px);
-    @media (min-width: 600px) {
+    @media (min-width: 450px) {
         margin-left: calc(40% - 320px);
         font-size: 90px;
+        margin: 250px 0 0 135px;
+    }
+    @media (min-width: 1000px) {
         margin: 250px 0 0 150px;
     }
 }
@@ -139,9 +141,12 @@
     color: white;
     font-size: 16px;
     margin: 10px calc(50% - 150px)0;
-    @media (min-width: 600px) {
+    @media (min-width: 450px) {
         margin-left: calc(40% - 195px);
         font-size: 34px;
+        margin: 0 0 0 calc(50% - 325px);
+    }
+        @media (min-width: 1000px) {
         margin: 0 0 0 265px;
     }
 }
@@ -159,11 +164,21 @@
         color: white;
         font-size: 18px;
     }
-    @media (min-width: 600px) {
+    @media (min-width: 450px) {
         height: 70px;
         width: 220px;
         margin-top: 75px;
-            padding: calc(3% - 20px) calc(10% - 20px);
+        padding: calc(5% - 20px) calc(10% - 20px);
+        margin-left: calc(35% - 20px);
+        span {
+            text-align: center;
+            margin-left: calc(35% - 20px);
+            color: white;
+            font-size: 25px;
+        }
+    }
+        @media (min-width: 1000px) {
+        padding: calc(3% - 20px) calc(10% - 20px);
         span {
             text-align: center;
             margin-left: calc(50% - 40px);
@@ -171,6 +186,7 @@
             font-size: 25px;
         }
     }
+    
 }
 
 .btnOne:hover {
@@ -200,5 +216,5 @@
 }
 
 .mobileMenuPos {
-       margin: 65px 0px 0 calc(38% - 10px);
+    margin: 65px 0px 0 calc(38% - 10px);
 }

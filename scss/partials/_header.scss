@@ -1,198 +1,223 @@
-    $color: #e84b82;
-    $transition-time: .5s;
-    .wrapper {
-        background: rgba(255, 255, 255, 0.2);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        position: absolute;
-        z-index: 999;
-        left: 0;
-        right: 0px;
-        top: 0px;
-        width: 100%;
+$transition-time: .5s;
+.wrapper {
+    background: rgba(255, 255, 255, 0.2);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+}
+
+.barOne {
+    height: 183px;
+    @media (min-width: 450px) {
+        height: 123px;
     }
-    
-    .barOne {
-        height: 183px;
-        @media (min-width: 600px) {
-            height: 123px;
-        }
+}
+
+.show-hide-menu {
+    color: white;
+    @media (min-width: 449px) {
+        display: none;
     }
-    
-    .show-hide-menu {
-        color: white;
-        @media (min-width: 600px) {
-            display: none;
-        }
-    }
-    
-    .stickyBar {
-        .menu {
-            display: none;
-            @media (min-width: 650px) {
-                display: inline-block;
-                font-weight: 700;
-                top: 60%;
-                left: 55%;
-                position: absolute;
-                transition: 0.5s;
-            }
-        }
-        .testPosition {
-            @media (min-width: 650px) {
-                display: inline-block;
-                font-weight: 700;
-                top: 35%;
-                left: 55%;
-                position: absolute;
-                transition: 0.5s;
-            }
-        }
-        li {
+}
+
+.stickyBar {
+    .menu {
+        display: none;
+        @media (min-width: 450px) {
             display: inline-block;
-            text-align: center;
-            color: white;
-            @media (min-width: 650px) {
-                display: inline-block;
-                font-size: 20px;
-                letter-spacing: 0.2px;
-                padding: 5px 28px 0px 0px;
-                color: white;
-            }
+            font-weight: 700;
+            top: 60%;
+            left: 42%;
+            position: absolute;
+            transition: 0.5s;
         }
-        .hoverAnimation {
-            @media (min-width: 600px) {
-                color: white;
-                display: inline-block;
-                text-decoration: none;
-                overflow: hidden;
-                vertical-align: top;
-                -webkit-perspective: 600px;
-                -ms-perspective: 600px;
-                perspective: 600px;
-                -webkit-perspective-origin: 50% 50%;
-                -ms-perspective-origin: 50% 50%;
-                perspective-origin: 50% 50%;
-                &:hover span {
-                    background: $footerBtnRight;
-                    -webkit-transform: translate3d( 0px, 0px, -30px) rotateX( 90deg);
-                    -ms-transform: translate3d( 0px, 0px, -30px) rotateX( 90deg);
-                    transform: translate3d( 0px, 0px, -30px) rotateX( 90deg);
-                }
-                span {
-                    font-size: 21px;
+        @media (min-width: 1000px) {
+            left: 35%;
+        }
+        @media (min-width: 1100px) {
+            left: 44%;
+        }
+        @media (min-width: 1200px) {
+            left: 47%;
+        }
+    }
+    .testPosition {
+        @media (min-width: 450px) {
+            display: inline-block;
+            font-weight: 700;
+            top: 35%;
+            left: 42%;
+            position: absolute;
+            transition: 0.5s;
+        }
+        @media (min-width: 1000px) {
+            left: 47%;
+        }
+    }
+    li {
+        display: inline-block;
+        text-align: center;
+        color: white;
+        @media (min-width: 450px) {
+            display: inline-block;
+            font-size: 20px;
+            letter-spacing: 0.2px;
+            padding: 0px 5px 0px 0px;
+            color: white;
+        }
+        @media (min-width: 1000px) {
+            padding: 5px 28px 0px 0px;
+            display: inline-block;
+            font-size: 20px;
+            letter-spacing: 0.2px;
+            color: white;
+        }
+    }
+    .hoverAnimation {
+        @media (min-width: 450px) {
+            color: white;
+            display: inline-block;
+            text-decoration: none;
+            overflow: hidden;
+            vertical-align: top;
+            -webkit-perspective: 600px;
+            -ms-perspective: 600px;
+            perspective: 600px;
+            -webkit-perspective-origin: 50% 50%;
+            -ms-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+            &:hover span {
+                background: $footerBtnRight;
+                -webkit-transform: translate3d( 0px, 0px, -30px) rotateX( 90deg);
+                -ms-transform: translate3d( 0px, 0px, -30px) rotateX( 90deg);
+                transform: translate3d( 0px, 0px, -30px) rotateX( 90deg);
+            }
+            span {
+                font-size: 14px;
+                display: block;
+                position: relative;
+                padding: 0 3px;
+                -webkit-transition: all .5s ease;
+                -ms-transition: all .5s ease;
+                transition: all .5s ease;
+                -webkit-transform-origin: 50% 0%;
+                -ms-transform-origin: 50% 0%;
+                transform-origin: 50% 0%;
+                -webkit-transform-style: preserve-3d;
+                -ms-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                &:after {
+                    content: attr(data-title);
                     display: block;
-                    position: relative;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
                     padding: 0 3px;
-                    -webkit-transition: all .5s ease;
-                    -ms-transition: all .5s ease;
-                    transition: all .5s ease;
+                    color: #fff;
+                    background: $footerBtnRight;
                     -webkit-transform-origin: 50% 0%;
                     -ms-transform-origin: 50% 0%;
                     transform-origin: 50% 0%;
-                    -webkit-transform-style: preserve-3d;
-                    -ms-transform-style: preserve-3d;
-                    transform-style: preserve-3d;
-                    &:after {
-                        content: attr(data-title);
-                        display: block;
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        padding: 0 3px;
-                        color: #fff;
-                        background: $footerBtnRight;
-                        -webkit-transform-origin: 50% 0%;
-                        -ms-transform-origin: 50% 0%;
-                        transform-origin: 50% 0%;
-                        -webkit-transform: translate3d( 0px, 105%, 0px) rotateX( -90deg);
-                        -ms-transform: translate3d( 0px, 105%, 0px) rotateX( -90deg);
-                        transform: translate3d( 0px, 105%, 0px) rotateX( -90deg);
-                    }
+                    -webkit-transform: translate3d( 0px, 105%, 0px) rotateX( -90deg);
+                    -ms-transform: translate3d( 0px, 105%, 0px) rotateX( -90deg);
+                    transform: translate3d( 0px, 105%, 0px) rotateX( -90deg);
+                }
+                @media (min-width: 1000px) {
+                    font-size: 21px;
                 }
             }
         }
     }
-    
-    .box {
-        background-color: orange;
+}
+
+.box {
+    background-color: orange;
+}
+
+.showHideMenu {
+    width: 120px;
+    height: 50px;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    margin: 105px 0px 0 calc(38% - 10px);
+    p {
+        text-align: center;
+        margin-top: calc(22% - 10px);
+        letter-spacing: 2px;
+        font-weight: 600;
     }
-    
-    .showHideMenu {
-        width: 120px;
-        height: 50px;
-        border: 2px solid white;
-        color: white;
-        cursor: pointer;
-        display: inline-block;
-        margin: 105px 0px 0 calc(38% - 10px);
-        p {
-            text-align: center;
-            margin-top: calc(22% - 10px);
-            letter-spacing: 2px;
-            font-weight: 600;
-        }
-        @media (min-width: 650px) {
-            display: none;
-        }
-    }
-    
-    .logo {
-        width: 250px;
-        height: 50px;
-        background-image: url("../images/podpis%20zdjec%20copy.PNG");
-        background-size: contain;
-        background-repeat: no-repeat;
-        display: inline-block;
-        top: calc(50% - 55px);
-        left: calc(24% - 25px);
-        position: absolute;
-        @media (min-width: 650px) {
-            //        position: relative;
-            //        left: 0%;
-            //        top: 2.5em;
-            position: absolute;
-            left: 12%;
-            top: 3.5em;
-            transition: 0.5s;
-        }
-    }
-    
-    .logoSticky {
-//        top: calc(50% - 55px);
-//        left: calc(39% - 93px);
-        top: calc(50% - 55px);
-    left: calc(24% - 25px);
-        transition: 1s;
-        @media (min-width: 650px) {
-            position: absolute;
-            left: 12%;
-            top: 0.5em;
-            transition: 0.5s;
-        }
-    }
-    
-    .topBtn {
+    @media (min-width: 450px) {
         display: none;
-        @media (min-width: 650px) {
-            transition: 2s;
-            width: 50px;
-            height: 50px;
-            background-color: $footerBtnRight;
-            position: fixed;
-            right: 10px;
-            bottom: 10px;
-            overflow: hidden;
-            z-index: 99;
-        }
-        span {
-            font-size: 60px;
-            transform: rotate(-90deg);
-            color: white;   
-            display: inherit;
-            margin-left: calc(50% - 37px);
-            margin-top: -25px;
-            cursor: pointer;
-        }
     }
+}
+
+.logo {
+    width: 250px;
+    height: 50px;
+    background-image: url("../images/podpis%20zdjec%20copy.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    top: calc(50% - 55px);
+    left: calc(24% - 25px);
+    position: absolute;
+    @media (min-width: 450px) {
+        position: absolute;
+        left: 5%;
+        top: 3.5em;
+        transition: 0.5s;
+    }
+    @media (min-width: 1000px) {
+        left: 12%;
+        position: absolute;
+        top: 3.5em;
+        transition: 0.5s;
+    }
+}
+
+.logoSticky {
+    top: calc(50% - 55px);
+    left: calc(24% - 25px);
+    transition: 1s;
+    @media (min-width: 450px) {
+        position: absolute;
+        left: 5%;
+        top: 0.5em;
+        transition: 0.5s;
+    }
+    @media (min-width: 1000px) {
+        left: 12%;
+    }
+}
+
+.topBtn {
+    display: none;
+    @media (min-width: 450px) {
+        transition: 2s;
+        width: 50px;
+        height: 50px;
+        background-color: $footerBtnRight;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        overflow: hidden;
+        z-index: 99;
+    }
+    span {
+        font-size: 60px;
+        transform: rotate(-90deg);
+        color: white;
+        display: inherit;
+        margin-left: calc(50% - 37px);
+        margin-top: -25px;
+        cursor: pointer;
+    }
+}
