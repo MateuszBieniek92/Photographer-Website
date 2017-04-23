@@ -13,9 +13,13 @@ gulp.task('sass', function () {
         .pipe(sass({
             errLogToConsole: true
         }))
+        .pipe(sass({
+            outputStyle: 'compressed',
+            sourceComments: 'map'
+        }))
         .pipe(gulp.dest('css'))
 });
 
-gulp.task('watch', function(){
-gulp.watch('scss/**/*.scss', ['sass']);
+gulp.task('watch', function () {
+    gulp.watch('scss/**/*.scss', ['sass']);
 })
