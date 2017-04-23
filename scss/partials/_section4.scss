@@ -80,23 +80,32 @@
     display: flex;
     flex-direction: row;
     list-style: none;
-    margin: 20px calc(50% - 20px);
+    margin: 20px calc(50% - 42px);
     cursor: pointer;
     li {
-        margin-right: 5px;
+        margin-right: 15px; //5px;
         z-index: 500;
         border-radius: 50%;
-        width: 5px;
-        height: 5px;
+        width: 12px; //5px;
+        height: 12px; //5px;
         background: white;
     }
+//    :hover {
+//                z-index: 500;
+//        border-radius: 50%;
+//        width: 16px;
+//        height: 16px;
+//        background: #ec9c5c;
+//        margin: -2px 10px 0 0;
+//    }
     .active {
         z-index: 500;
         border-radius: 50%;
-        width: 15px;
-        height: 15px;
-        background: $sectionFiveColor;
-        margin: -5px 5px 0 0;
+        width: 16px;
+        height: 16px;
+        background: #ec9c5c;
+        margin: -2px 15px 0 0;
+        
     }
 }
 

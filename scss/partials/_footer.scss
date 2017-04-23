@@ -56,6 +56,10 @@
         margin: calc(25% - 20px) 0 0 0;
         @media (min-width: 600px) {
             margin: 55px 0 0 0;
+            font-size: 1em;
+        }
+        @media (min-width: 1000px) {
+            
             font-size: 1.5em;
         }
     }

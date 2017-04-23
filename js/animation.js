@@ -280,7 +280,7 @@ $(function () {
         $sectionFourBtnTwo.removeClass('active');
         $sectionFourBtnThree.removeClass('active');
     })
-
+    
     $sectionFourBtnTwo.on('click', function () {
 
         $liOne.css('display', 'none');
@@ -292,7 +292,7 @@ $(function () {
         $sectionFourBtnThree.removeClass('active');
 
     })
-
+    
     $sectionFourBtnThree.on('click', function () {
         $liOne.css('display', 'none');
         $liTwo.css('display', 'none');
@@ -301,9 +301,8 @@ $(function () {
         $sectionFourBtnOne.removeClass('active');
         $sectionFourBtnTwo.removeClass('active');
         $(this).addClass('active');
-    })
-
-
+    })    
+    
     /// gallery section 5     
 
     var $btnAllGalery = $('.btnsSectionFive').children().eq(0);
