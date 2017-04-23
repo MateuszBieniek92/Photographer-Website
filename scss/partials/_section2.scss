@@ -6,9 +6,12 @@
     position: absolute;
     width: 100%;
     top: 639px;
-    @media (min-width: 600px) {
-        height: 639px;
-        top: 950px;
+    @media (min-width: 451px) {
+        top: 890px;
+    }
+    @media (min-width: 1000px) {
+        height: 620px;
+        top: 951px;
     }
 }
 
@@ -28,7 +31,7 @@
     margin: 32px 6px;
     @media (min-width: 450px) {
         font-size: 65px;
-        margin: 25px 6px;
+        margin: 42px 6px;
         font-weight: 600;
     }
     @media (min-width: 1000px) {
@@ -64,17 +67,17 @@
     display: none;
     @media (min-width: 450px) {
         display: inline-block;
-        height: 639px;
+        height: 650px;
         background-image: url(../images/Produktowe_Roksana-1-min.jpg);
         background-size: 103% auto;
         background-attachment: fixed;
-         background-position: -953% -38%;
+        background-position: -953% -38%;
         background-repeat: no-repeat;
         float: right;
     }
     @media (min-width: 1000px) {
-          background-size: 55% auto;
+        background-size: 55% auto;
         background-position: 95% 0%;
-       
+         height: 620px;
     }
 }

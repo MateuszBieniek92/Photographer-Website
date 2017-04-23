@@ -97,7 +97,11 @@
         text-align: justify;
         margin-bottom: 25px;
         @media (min-width: 451px) {
- margin-bottom: 0;
+            margin-bottom: 0;
+            margin: 2px 15px;
+        }
+        @media (min-width: 1000px) {
+            margin: 2px 0;
         }
     }
 }

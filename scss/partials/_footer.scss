@@ -31,9 +31,11 @@
             font-weight: 700;
         }
     }
-    @media (min-width: 600px) {
-        top: 6276px;
+    @media (min-width: 450px) {
+        top: 6024px;
         width: 100%;
+    }    @media (min-width: 1000px) {
+        top: 6276px;
     }
 }
 

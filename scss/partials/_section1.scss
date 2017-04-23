@@ -1,7 +1,7 @@
 .sectionOne {
     height: 640px;
     @media (min-width: 600px) {
-        height: 950px;
+        height: 1250px; //950px
         position: relative;
         overflow: hidden;
     }
@@ -19,10 +19,10 @@
             background-attachment: fixed;
             background-position: center;
             background-image: url("../images/galeria/Natalia_Tarnawska-11-min-min.jpg");
-            height: 100vh;
+            height: 200vh;
             width: 100%;
             @media (min-width: 600px) {
-                height: 101vh;
+                height: 201vh;
                 width: 100%;
             }
         }
@@ -33,11 +33,11 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
-            background-image: url("../images/galeria/Anna_Moskal-13-min-min.jpg");
-            height: 101vh;
+            background-image: url("../images/galeria/Kinga_Kuczek-9-min.jpg");
+            height: 201vh;
             width: 100%;
             @media (min-width: 600px) {
-                height: 100vh;
+                height: 200vh;
                 width: 100%;
             }
         }
@@ -49,10 +49,10 @@
             background-attachment: fixed;
             background-position: center;
             background-image: url("../images/galeria/Aleksandra_Los-17-min-min.jpg");
-            height: 101vh;
+            height: 201vh;
             width: 100%;
             @media (min-width: 600px) {
-                height: 100vh;
+                height: 200vh;
                 width: 100%;
             }
         }
@@ -79,6 +79,9 @@
         position: absolute;
         margin-left: calc(50% - 12px);
         z-index: 999;
+    }
+    @media (min-width: 600px) {
+        top: calc(50% - 230px);
     }
 }
 
@@ -107,6 +110,7 @@
     }
     @media (min-width: 600px) {
         right: -40px;
+        top: calc(50% - 230px);
     }
 }
 
@@ -146,7 +150,7 @@
         font-size: 34px;
         margin: 0 0 0 calc(50% - 325px);
     }
-        @media (min-width: 1000px) {
+    @media (min-width: 1000px) {
         margin: 0 0 0 265px;
     }
 }
@@ -177,7 +181,7 @@
             font-size: 25px;
         }
     }
-        @media (min-width: 1000px) {
+    @media (min-width: 1000px) {
         padding: calc(3% - 20px) calc(10% - 20px);
         span {
             text-align: center;
@@ -186,7 +190,6 @@
             font-size: 25px;
         }
     }
-    
 }
 
 .btnOne:hover {
@@ -217,4 +220,15 @@
 
 .mobileMenuPos {
     margin: 65px 0px 0 calc(38% - 10px);
+}
+
+.mobileMenuActive {
+    display: flex;
+    background-color: orange;
+    width: 120px;
+    height: 200px;
+    margin-left: calc(50% - 49px);
+    text-align: center;
+    flex-direction: column;
+    padding: 12px;
 }

@@ -11,10 +11,13 @@
             background-color: white;
         }
     }
-    @media (min-width: 600px) {
-        height: 1865px;
+    @media (min-width: 451px) {
+        height: 1790px;
         width: 100%;
         top: 3266px;
+    }
+    @media (min-width: 1000px) {
+        height: 1865px;
     }
 }
 
@@ -63,7 +66,8 @@
     }
 }
 
-.col-4 {
+.col-4,
+.col-6 {
     padding: 0;
 }
 
@@ -82,12 +86,8 @@
 }
 
 .imOne {
-   
-     @media (max-width: 450px) {
-   width: 100vw;
-//         img {
-//              width: 96%;
-//         }
+    @media (max-width: 450px) {
+        width: 100vw;
     }
     height: 250px;
     img {
@@ -105,42 +105,16 @@
             width: 100%;
         }
     }
-    .overlay {
-        position: absolute;
-        bottom: 100%;
-        left: 0;
-        right: 0;
-        background-color: #008CBA;
-        overflow: hidden;
-        width: 40em;
-        height: 0;
-        transition: .5s ease;
-        z-index: 990;
-    }
-    .test {
-        white-space: nowrap;
-        color: white;
-        font-size: 20px;
-        position: absolute;
-        overflow: hidden;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        z-index: 999;
-    }
-}
-
-.imagesRow img:hover .overlay {
-    bottom: 0;
-    height: 100%;
-    z-index: 990;
 }
 
 .btnView {
     margin-top: 30px;
     padding: 15px 0;
-    @media (min-width: 600px) {
+    @media (min-width: 450px) {
+        margin: 70px 0 0 calc(50% - 80px);
+        padding: 5px 0;
+    }
+    @media (min-width: 1000px) {
         margin: 40px 0 0 calc(50% - 80px);
         padding: 5px 0;
     }

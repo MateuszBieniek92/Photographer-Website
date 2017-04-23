@@ -4,7 +4,11 @@
                 height: 500px;
                 width: 100%;
                 top: 8792px;
-                @media (min-width: 600px) {
+                @media (min-width: 450px) {
+                    top: 5865px;
+                    width: 100%;
+                }
+                @media (min-width: 1000px) {
                     top: 6116px;
                     width: 100%;
                 }
@@ -51,8 +55,7 @@
                     z-index: 400;
                 }
                 @media (min-width: 1000px) {
-//                    width:350px;
-
+                    //                    width:350px;
                 }
                 a {
                     position: relative;
