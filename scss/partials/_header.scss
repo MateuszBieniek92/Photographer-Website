@@ -147,7 +147,7 @@ $transition-time: .5s;
     color: white;
     cursor: pointer;
     display: inline-block;
-    margin: 105px 0px 0 calc(38% - 10px);
+    margin: 105px 0px 0 calc(50% - 4.5em);
     p {
         text-align: center;
         margin-top: calc(22% - 10px);
@@ -167,7 +167,7 @@ $transition-time: .5s;
     background-repeat: no-repeat;
     display: inline-block;
     top: calc(50% - 55px);
-    left: calc(24% - 25px);
+    left: calc(50% - 8.7em);
     position: absolute;
     @media (min-width: 450px) {
         position: absolute;
@@ -176,7 +176,7 @@ $transition-time: .5s;
         transition: 0.5s;
     }
     @media (min-width: 1000px) {
-        left: 12%;
+        left: 16%;
         position: absolute;
         top: 3.5em;
         transition: 0.5s;
@@ -185,7 +185,7 @@ $transition-time: .5s;
 
 .logoSticky {
     top: calc(50% - 55px);
-    left: calc(24% - 25px);
+    left: calc(50% - 8.7em);
     transition: 1s;
     @media (min-width: 450px) {
         position: absolute;
@@ -194,7 +194,7 @@ $transition-time: .5s;
         transition: 0.5s;
     }
     @media (min-width: 1000px) {
-        left: 12%;
+        left: 16%;
     }
 }
 

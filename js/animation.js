@@ -3,7 +3,7 @@ $(function () {
     /// btn menu mobile    
 
     var mobile = window.matchMedia("screen and (max-width: 600px)");
-    var mobileTop = window.matchMedia("screen and (min-width: 1000px)");
+    var tabletsAndDesktop = window.matchMedia("screen and (min-width: 451px)");
     var $btn1 = $('.showHideMenu');
     var $list = $('.menu');
 
@@ -61,7 +61,7 @@ $(function () {
     }
     function showHide(){
     $btn1.on('click', function () {
-        $list.slideToggle().css('background-color', 'orange');
+        $list.addClass('mobileMenuActive').slideToggle();
     });
     $btn1.on('hover', function () {
         $(this).css('background-color', 'white').css('color', 'black');
@@ -75,6 +75,8 @@ $(function () {
     var body = $('body');
     var topScroll = body.scrollTop();
 
+       var scrollDesktop = function () {
+    if (tabletsAndDesktop.matches){
     $headBtn.on('click', function () {
         $('html, body').animate({
             scrollTop: 892
@@ -117,6 +119,44 @@ $(function () {
             scrollTop: 6043
         }, 2000);
     });
+    } else {
+            /// SCROLL menu MOBILE
+        
+            /// home btn ->  scroll to header
+    $menuOne.on('click', function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 2000);
+    });
+    /// o mnie btn ->  scroll to o mnie
+    $menuTwo.on('click', function () {
+        $('html, body').animate({
+            scrollTop: 543
+        }, 2000);
+    });
+    /// services btn ->  scroll to services
+    $menuThree.on('click', function () {
+        $('html, body').animate({
+            scrollTop: 1180
+        }, 2000);
+    });
+    /// portfolio btn ->  scroll to portfolio
+    $menuFour.on('click', function () {
+        $('html, body').animate({
+            scrollTop: 3740
+        }, 2000);
+    });
+    /// kontakt btn ->  scroll to kontakt
+    $menuFive.on('click', function () {
+        $('html, body').animate({
+            scrollTop: 9152
+        }, 2000);
+    });
+        
+    }
+       }
+           $(window).resize(scrollDesktop);
+    scrollDesktop();
 
 
     /// sticky bar
@@ -136,7 +176,7 @@ $(function () {
             $logo.removeClass('logoSticky');
             $menuBtn.removeClass('mobileMenuPos');
         }
-        // console.log(pix, top);
+         //console.log(pix, top);
     })
 
     $(window).on('rezise', function () {
