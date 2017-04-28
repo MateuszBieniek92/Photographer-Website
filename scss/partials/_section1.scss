@@ -146,6 +146,11 @@
     margin: 10px calc(50% - 150px);
     @media (min-width: 450px) {
         margin-left: calc(40% - 195px);
+        font-size: 27px;
+        margin: 0px 0 0 calc(50% - 270px);
+    }
+    @media (min-width: 800px) {
+        margin-left: calc(40% - 195px);
         font-size: 34px;
         margin: 0 0 0 calc(50% - 325px);
     }
@@ -226,13 +231,13 @@
     background-color: $footerBtnCenter;
     width: 118px;
     height: 200px;
-    margin-left:calc(50% - 4.4em);
+    margin-left: calc(50% - 4.4em);
     text-align: center;
     flex-direction: column;
     padding: 15px 0;
-    li{
-            display: block;
-            padding: 0 0 12px 0;
+    li {
+        display: block;
+        padding: 0 0 12px 0;
         a {
             text-decoration: none;
             color: white;
@@ -241,9 +246,8 @@
                 font-size: 20px;
             }
         }
-   
     }
-            li:hover {
-            background-color: $footerBtnLeft;
-        } 
+    li:hover {
+        background-color: $footerBtnLeft;
+    }
 }

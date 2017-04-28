@@ -50,6 +50,11 @@
         width: 100%;
     }
     @media (min-width: 451px) {
+        flex-direction: column;
+        width: 85%;
+        margin-left: 25px;
+    }
+    @media (min-width: 800px) {
         flex-direction: row;
         width: 85%;
         margin-left: 25px;
