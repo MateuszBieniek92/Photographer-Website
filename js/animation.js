@@ -213,7 +213,7 @@ $(function () {
             $logo.removeClass('logoSticky');
             $menuBtn.removeClass('mobileMenuPos');
         }
-        console.log(pix, top);
+        //console.log(pix, top);
     })
 
     $(window).on('rezise', function () {
