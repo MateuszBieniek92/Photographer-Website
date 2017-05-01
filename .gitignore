@@ -1,3 +1,5 @@
 node_modules/
 zdj_background/
 js/
+dist/animation-debug.js
+dist/jquery-3.2.0.min-debug.js

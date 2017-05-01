@@ -15,14 +15,17 @@
             background-color: white;
         }
     }
-        @media (min-width: 450px) {
+    @media (min-width: 451px) {
         height: 810px;
         width: 100%;
-        top: 5056px;
+        top: 5360px;
     }
-    
-    
-    @media (min-width: 1000px) {
+    @media (min-width: 900px) {
+        height: 990px;
+        width: 100%;
+        top: 4760px;
+    }
+    @media (min-width: 1100px) {
         height: 985px;
         width: 100%;
         top: 5131px;
@@ -44,33 +47,44 @@
     background-color: white;
     margin: 8px;
     .blogTextName {
-        margin-top: 5px;
+        margin-top: 35px;
         margin-bottom: 5px;
         font-size: 12px;
         color: $textTwoColor;
-        @media (min-width: 1000px) {
-            margin-top: 20px;
+        @media (min-width: 451px) {
+            margin-top: 10px;
             margin-bottom: 10px;
+            font-size: 12px;
+        }
+        @media (min-width: 1000px) {
             font-size: 15px;
+            margin-top: 20px;
         }
     }
     .blogHeader {
         font-size: 26px;
         font-weight: 700;
         color: $headerSectionThree;
+        @media (min-width: 451px) {
+            font-size: 18px;
+        }
+        @media (min-width: 1000px) {
+            font-size: 26px;
+        }
     }
     .blogDate {
         margin-top: 10px;
-        font-size: 14px;
+        font-size: 12px;
         color: $footerBtnCenter;
     }
-    @media (min-width: 450px) {
+    @media (min-width: 451px) {
         width: 235px;
         height: 425px;
     }
     @media (min-width: 1000px) {
         width: 400px;
-         height: 600px;
+        height: 600px;
+        font-size: 14px;
     }
     p,
     h2 {

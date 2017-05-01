@@ -19,10 +19,10 @@
             background-attachment: fixed;
             background-position: center;
             background-image: url("../images/galeria/Natalia_Tarnawska-11-min-min.jpg");
-            height: 101vh;
+            height: 301vh;
             width: 100%;
             @media (min-width: 600px) {
-                height: 201vh;
+                height: 301vh;
                 width: 100%;
             }
         }
@@ -34,10 +34,10 @@
             background-attachment: fixed;
             background-position: center;
             background-image: url("../images/galeria/Kinga_Kuczek-9-min.jpg");
-            height: 101vh;
+            height: 301vh;
             width: 100%;
             @media (min-width: 600px) {
-                height: 200vh;
+                height: 300vh;
                 width: 100%;
             }
         }
@@ -49,10 +49,10 @@
             background-attachment: fixed;
             background-position: center;
             background-image: url("../images/galeria/Aleksandra_Los-17-min-min.jpg");
-            height: 101vh;
+            height: 301vh;
             width: 100%;
             @media (min-width: 600px) {
-                height: 200vh;
+                height: 300vh;
                 width: 100%;
             }
         }
@@ -109,7 +109,7 @@
         z-index: 999;
     }
     @media (min-width: 600px) {
-        right: -40px;
+        // right: -40px;
         top: calc(50% - 230px);
     }
 }

@@ -6,9 +6,10 @@
     position: absolute;
     width: 100%;
     top: 639px;
-    @media (min-width: 451px) {
+    @media (min-width: 600px) {
         top: 890px;
-        height: 725px;
+        // height: 725px;
+        // height: 550px;
     }
     @media (min-width: 1000px) {
         height: 620px;
@@ -20,7 +21,7 @@
     * {
         width: 100%;
     }
-    @media (min-width: 600px) {
+    @media (min-width: 655px) {
         width: 50%;
         display: inline-block;
     }
@@ -59,6 +60,12 @@
     font-size: 18px;
     font-weight: 600;
     margin: 25px 0 30px 0;
+    @media (min-width: 450px) {
+        margin: 25px 0 15px 0;
+    }
+    @media (min-width: 700px) {
+        margin: 25px 0 30px 0;
+    }
 }
 
 .textSectionTwo {
@@ -71,14 +78,16 @@
     }
     @media (min-width: 1000px) {
         padding: 0;
+        padding-right: 10px;
     }
 }
 
 .imageSectionTwo {
     display: none;
-    @media (min-width: 450px) {
+    @media (min-width: 655px) {
         display: inline-block;
-        height: 725px;
+        //  height: 725px;
+        height: 650px;
         background-image: url(../images/Produktowe_Roksana-1-min.jpg);
         background-size: 103% auto;
         background-attachment: fixed;

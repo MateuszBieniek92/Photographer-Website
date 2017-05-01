@@ -9,7 +9,10 @@
     background-position: center;
     position: absolute;
     @media (min-width: 600px) {
-        height: 813px;
+        width: 100%;
+        top: 1530px;
+    }
+    @media (min-width: 1000px) {
         width: 100%;
         top: 1540px;
     }
@@ -44,7 +47,6 @@
 .icones {
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
     width: 90%;
     * {
         width: 100%;
@@ -53,13 +55,18 @@
         flex-direction: column;
         width: 85%;
         margin-left: 25px;
+        margin-bottom: 10px;
     }
     @media (min-width: 800px) {
         flex-direction: row;
         width: 85%;
         margin-left: 25px;
+        margin-bottom: 60px;
     }
     @media (min-width: 1000px) {
+        width: 95%;
+    }
+    @media (min-width: 1100px) {
         width: 100%;
     }
 }

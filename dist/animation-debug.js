@@ -2,8 +2,9 @@ $(function () {
 
     /// btn menu mobile    
 
-    var mobile = window.matchMedia("screen and (max-width: 600px)");
-    var tabletsAndDesktop = window.matchMedia("screen and (min-width: 451px)");
+    var mobile = window.matchMedia("screen and (max-width: 550px)");
+    var desktop = window.matchMedia("screen and (min-width: 900px)");
+    var tablet = window.matchMedia("screen and (min-width: 551px) and (max-width: 899px)");
     var $btn1 = $('.showHideMenu');
     var $list = $('.menu');
 
@@ -36,7 +37,7 @@ $(function () {
     var $menuFour = $('.menu').children().eq(3);
     var $menuFive = $('.menu').children().eq(4);
 
-    console.log($menuOne, $menuTwo);
+    //  console.log($menuOne, $menuTwo);
 
     //console.log($array);
 
@@ -59,15 +60,16 @@ $(function () {
             }, 500);
         })
     }
-    function showHide(){
-    $btn1.on('click', function () {
-        $list.addClass('mobileMenuActive').slideToggle();
-    });
-    $btn1.on('hover', function () {
-        $(this).css('background-color', 'white').css('color', 'black');
-    });
-        
-        }
+
+    function showHide() {
+        $btn1.on('click', function () {
+            $list.addClass('mobileMenuActive').slideToggle();
+        });
+        $btn1.on('hover', function () {
+            $(this).css('background-color', 'white').css('color', 'black');
+        });
+
+    }
     showHide();
     /// btn section 1 ->  scroll to section 2
 
@@ -75,87 +77,122 @@ $(function () {
     var body = $('body');
     var topScroll = body.scrollTop();
 
-       var scrollDesktop = function () {
-    if (tabletsAndDesktop.matches){
-    $headBtn.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 892
-        }, 2000);
-    });
-
-    /// top btn ->  scroll to header
-    $topBtn.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 2000);
-    });
-    /// home btn ->  scroll to header
-    $menuOne.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 2000);
-    });
-    /// o mnie btn ->  scroll to o mnie
-    $menuTwo.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 892
-        }, 2000);
-    });
-    /// services btn ->  scroll to services
-    $menuThree.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 1528
-        }, 2000);
-    });
-    /// portfolio btn ->  scroll to portfolio
-    $menuFour.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 3227
-        }, 2000);
-    });
-    /// kontakt btn ->  scroll to kontakt
-    $menuFive.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 6043
-        }, 2000);
-    });
-    } else {
+    var scrollDesktop = function () {
+        if (mobile.matches) {
             /// SCROLL menu MOBILE
-        
+
             /// home btn ->  scroll to header
-    $menuOne.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 2000);
-    });
-    /// o mnie btn ->  scroll to o mnie
-    $menuTwo.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 543
-        }, 2000);
-    });
-    /// services btn ->  scroll to services
-    $menuThree.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 1180
-        }, 2000);
-    });
-    /// portfolio btn ->  scroll to portfolio
-    $menuFour.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 3740
-        }, 2000);
-    });
-    /// kontakt btn ->  scroll to kontakt
-    $menuFive.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 9152
-        }, 2000);
-    });
-        
-    }
-       }
-           $(window).resize(scrollDesktop);
+            $menuOne.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 2000);
+            });
+            /// o mnie btn ->  scroll to o mnie
+            $menuTwo.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 543
+                }, 2000);
+            });
+            /// services btn ->  scroll to services
+            $menuThree.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 1180
+                }, 2000);
+            });
+            /// portfolio btn ->  scroll to portfolio
+            $menuFour.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 3740
+                }, 2000);
+            });
+            /// kontakt btn ->  scroll to kontakt
+            $menuFive.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 9152
+                }, 2000);
+            });
+        } else if (tablet.matches) {
+            /// SCROLL menu TABLET
+
+            /// home btn ->  scroll to header
+            $menuOne.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 2000);
+            });
+            /// o mnie btn ->  scroll to o mnie
+            $menuTwo.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 837
+                }, 2000);
+            });
+            /// services btn ->  scroll to services
+            $menuThree.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 1492
+                }, 2000);
+            });
+            /// portfolio btn ->  scroll to portfolio
+            $menuFour.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 3647
+                }, 2000);
+            });
+            /// kontakt btn ->  scroll to kontakt
+            $menuFive.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 5941
+                }, 2000);
+            });
+
+        } else if (desktop.matches) {
+            $headBtn.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 892
+                }, 2000);
+            });
+
+            /// top btn ->  scroll to header
+            $topBtn.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 2000);
+            });
+            /// home btn ->  scroll to header
+            $menuOne.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 2000);
+            });
+            /// o mnie btn ->  scroll to o mnie
+            $menuTwo.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 892
+                }, 2000);
+            });
+            /// services btn ->  scroll to services
+            $menuThree.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 1528
+                }, 2000);
+            });
+            /// portfolio btn ->  scroll to portfolio
+            $menuFour.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 3227
+                }, 2000);
+            });
+            /// kontakt btn ->  scroll to kontakt
+            $menuFive.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 6043
+                }, 2000);
+            });
+        }
+
+    };
+
+    $(window).resize(scrollDesktop);
     scrollDesktop();
 
 
@@ -176,7 +213,7 @@ $(function () {
             $logo.removeClass('logoSticky');
             $menuBtn.removeClass('mobileMenuPos');
         }
-         //console.log(pix, top);
+        console.log(pix, top);
     })
 
     $(window).on('rezise', function () {
@@ -301,8 +338,8 @@ $(function () {
     var $liThree = $('.sliderSectionFour').children().last(1);
 
 
-    console.log($sectionFourBtnOne, $sectionFourBtnTwo, $sectionFourBtnThree);
-    console.log($liOne, $liTwo, $liThree);
+    //console.log($sectionFourBtnOne, $sectionFourBtnTwo, $sectionFourBtnThree);
+    //console.log($liOne, $liTwo, $liThree);
 
     $liOne.fadeIn(1000).css('display', 'inline-block');
     $liTwo.css('display', 'none');
@@ -353,11 +390,11 @@ $(function () {
     var $btnCatThree = $('.btnsSectionFive').children().eq(3);
     var $btnWatchAll = $('.sectionFive').last().find('.btnView');
 
-    console.log($btnWatchAll);
+    // console.log($btnWatchAll);
 
     var $rowOne = $('.sectionFive').find('.imagesRow');
     var $col = $rowOne.find('.col-4');
-    console.log($col);
+    // console.log($col);
 
     // resize gallery section 5
     var galleryResize = function () {
@@ -383,7 +420,7 @@ $(function () {
     var $fotoEight = $rowOne.children().eq(7);
     var $fotoNine = $rowOne.children().eq(8);
 
-    console.log($fotoOne);
+    //console.log($fotoOne);
 
     $btnAllGalery.on('click', function () {
         $rowOne.children().fadeIn(1000);

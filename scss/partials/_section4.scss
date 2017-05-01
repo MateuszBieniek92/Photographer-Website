@@ -17,6 +17,11 @@
         }
     }
     @media (min-width: 600px) {
+        height: 1097px;
+        width: 100%;
+        top: 2665px;
+    }
+    @media (min-width: 1000px) {
         height: 913px;
         width: 100%;
         top: 2353px;
@@ -91,7 +96,7 @@
         background: white;
     }
     :hover {
-                z-index: 500;
+        z-index: 500;
         border-radius: 50%;
         width: 16px;
         height: 16px;
@@ -106,7 +111,6 @@
         height: 16px;
         background: #ec9c5c;
         margin: -2px 15px 0 0;
-        
     }
 }
 
