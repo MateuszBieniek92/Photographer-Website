@@ -189,7 +189,6 @@ $(function () {
                 }, 2000);
             });
         }
-
     };
 
     $(window).resize(scrollDesktop);
@@ -302,7 +301,7 @@ $(function () {
                 })
                 .on('mouseout', function () {
                     $(this).stop().animate({
-                        left:-(widthPrev - 10) + 'px'
+                        left: -(widthPrev - 10) + 'px'
                     }, time);
                 })
                 .on('click', function () {

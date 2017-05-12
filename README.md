@@ -12,4 +12,4 @@ A website for photographer's portfolio. On this website you can find: parallax e
 
 ## Demo:
 
-https://github.com/MateuszBieniek92/Photographer-Website
+https://mateuszbieniek92.github.io/Photographer-Website/
